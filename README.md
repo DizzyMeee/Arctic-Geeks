@@ -1,6 +1,6 @@
 # How 2 use django
 
-1. python version 3.
+1. python version 3.9.x
 ```
 py --version
 ```
