@@ -38,8 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    # own app
     'arctic_geeks_app',
 
+    # third party app
     'crispy_forms',
 ]
 

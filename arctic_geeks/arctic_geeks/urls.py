@@ -15,9 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from arctic_geeks_app.views import register_view
+from arctic_geeks_app.views import register_view, home_view, login_view, logout_view
 
 urlpatterns = [
+    path('',home_view, name='home'),
     path('admin/', admin.site.urls),
-    path('register/', register_view)
+    path('register/', register_view),
+    path('login/', login_view),
+    path('logout/', logout_view),
 ]
