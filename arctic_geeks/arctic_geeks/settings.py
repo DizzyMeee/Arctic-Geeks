@@ -117,6 +117,11 @@ MESSAGE_TAGS = {
     messages.ERROR: 'alert-danger',
 }
 
+# media
+MEDIA_URL = '/media/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/
 
