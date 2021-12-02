@@ -1,7 +1,8 @@
 from django.contrib import admin
+from .models import JenisKomponen, Komponen, JenisInfo, InfoKomponen
 
 # Register your models here.
-from .models import TagComponent, Component
-
-admin.site.register(TagComponent)
-admin.site.register(Component)
+admin.site.register(JenisKomponen)
+admin.site.register(Komponen)
+admin.site.register(JenisInfo)
+admin.site.register(InfoKomponen)
