@@ -1,4 +1,4 @@
-## Objective
+## Objectives
 
 ### * Login/Register bisa dilaksanakan
 req: homepage, login dan register sudah ada tampilannya
