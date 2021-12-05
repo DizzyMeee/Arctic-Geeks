@@ -24,6 +24,10 @@ pip install Django
 catatan: Django yang terinstall hanya ada di dalam virtual environment tidak universal kayaknya...
 
 ## 5. clone git ini ke dalam venvnya (ini sama saja kayak django-admin startproject)
+masuk ke folder yang ada manage.py di dalamnya lalu run command di command prompt:
+```
+py manage.py migrate
+```
 
 ### catatan:
 disarankan clone ke folder local kalian dan install github desktop jadi ketika ada update atau tambahan dari kalian cukup upload ke local folder lalu push dari aplikasi github desktopnya atau pull ketika ada yang update di github ini sehingga kalian tidak tertinggal codenya
