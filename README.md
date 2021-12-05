@@ -7,7 +7,7 @@ py --version
 
 2. create venv (tentukan folder untuk menampung virtual environment)
 ```
-virtualenv -p python3
+virtualenv -p python3 .
 ```
 
 3. mengaktifkan venv di command prompt
