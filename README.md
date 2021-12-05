@@ -26,6 +26,6 @@ catatan: Django yang terinstall hanya ada di dalam virtual environment tidak uni
 ## 5. clone git ini ke dalam venvnya (ini sama saja kayak django-admin startproject)
 
 ### catatan:
-disarankan clone ke folder local kalian dan install github desktop jadi ketika ada update atau tambahan dari kalian tinggal upload ke local folder lalu push dari aplikasi github desktopnya
+disarankan clone ke folder local kalian dan install github desktop jadi ketika ada update atau tambahan dari kalian cukup upload ke local folder lalu push dari aplikasi github desktopnya atau pull ketika ada yang update di github ini sehingga kalian tidak tertinggal codenya
 
 catatan juga kalo mau push (publish ke github ini) pastikan sudah dicek, apakah sudah bagus untuk dipakai oleh teman-teman yang lain karena ketika sudah dipublish kemungkinan code yang lalu akan overwrite ketika kalian melakukan perubahan pada code yang sudah ada (update)
