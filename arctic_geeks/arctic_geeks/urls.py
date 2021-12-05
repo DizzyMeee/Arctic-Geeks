@@ -18,14 +18,13 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-from arctic_geeks_app.views import register_view, home_view, login_view, logout_view
+from home.views import home_view
 
 urlpatterns = [
-    path('',home_view, name='home'),
     path('admin/', admin.site.urls),
-    path('register/', register_view),
-    path('login/', login_view),
-    path('logout/', logout_view),
+    path('home/', include('home.urls', namespace='home')),
+    path('account/', include('account.urls', namespace='account')),
+    path('products/', include('products.urls', namespace='products')),
 ]
 
 if settings.DEBUG:
