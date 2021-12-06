@@ -2,16 +2,15 @@
 
 {% block content %}
 
-{% load crispy_forms_tags %}
-
-<div class="container py-5">
-    <h1>Login</h1>
-    <form method="POST">
-        {% csrf_token %}
-        {{ login_form|crispy}}
-        <button class="btn btn-primary" type="submit">Login</button>
+    <form method="POST"> {% csrf_token %}
+        <table>
+            {{ form.as_p}}
+            <tr>
+                <td>&nbsp;</td>
+                <td><input type='submit' value="Submit"></td>
+            </tr>
+        </table>
     </form>
     <p class="text-center">Don't have an account? <a href="{% url 'account:register' %}">Create an account</a>.</p>
-</div>
 
 {% endblock %}

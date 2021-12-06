@@ -44,11 +44,11 @@ INSTALLED_APPS = [
     'home',
 
     # third party app
-    'crispy_forms',
+    # 'crispy_forms',
     'polymorphic',
 ]
 
-CRISPY_TEMPLATE_PACK = 'bootstrap4'
+# CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -124,8 +124,8 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # redirect url
-LOGIN_REDIRECT_URL = 'home'
-LOGOUT_REDIRECT_URL = 'home'
+LOGIN_REDIRECT_URL = 'home:home'
+LOGOUT_REDIRECT_URL = 'home:home'
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/

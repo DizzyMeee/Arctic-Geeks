@@ -1,10 +1,10 @@
-from django.urls import path
+from django.urls import path, re_path
 
 from home.views import (
-    home_view
+    HomeView
 )
 
 app_name = "home"
 urlpatterns = [
-    path('', home_view, name="home"),
+    re_path(r'^$', HomeView.as_view(), name='home'),
 ]
