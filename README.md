@@ -24,6 +24,11 @@ pip install Django
 catatan: Django yang terinstall hanya ada di dalam virtual environment tidak universal kayaknya...
 
 ## 5. clone git ini ke dalam venvnya (ini sama saja kayak django-admin startproject)
+masuk ke folder yang ada requirements.txt nya, lalu install requirement tersebut kedalam virtual environmentnya:
+```
+pip install -r requirements.txt
+```
+
 masuk ke folder yang ada manage.py di dalamnya lalu run command di command prompt:
 ```
 py manage.py migrate
