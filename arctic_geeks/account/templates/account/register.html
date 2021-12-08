@@ -1,10 +1,10 @@
-{% extends "home/home.html" %}
+{% extends "base.html" %}
 
-{% block content %}
+{% block body %}
 
     <form method="POST"> {% csrf_token %}
             {{ form}}
             <input type="submit" value="Register">
     </form>
     <p class="text-center">If you already have an account, <a href="{% url 'account:login' %}">login</a> instead.</p>
-{% endblock %}
+{% endblock body %}
