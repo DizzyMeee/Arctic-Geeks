@@ -6,7 +6,6 @@ from polymorphic.models import PolymorphicModel
 class Komponen(PolymorphicModel):
     id = models.AutoField(primary_key=True)
     brand = models.CharField(max_length=30)
-    manufaktur = models.CharField(max_length=30, blank=True)
     nama_komponen = models.CharField(max_length=120, default="")
     harga = models.PositiveIntegerField()
     gambar = models.ImageField(upload_to='images/', blank=True)
@@ -15,6 +14,7 @@ class Komponen(PolymorphicModel):
     last_updated = models.DateTimeField(auto_now=True)
 
 class GPU(Komponen):
+    manufaktur = models.CharField(max_length=30)
     series = models.CharField(max_length=60)
 
 class CPU(Komponen):
@@ -24,6 +24,7 @@ class CPU(Komponen):
     socket = models.CharField(max_length=15)
 
 class Motherboard(Komponen):
+    manufaktur = models.CharField(max_length=30)
     socket = models.CharField(max_length=15)
     chipset = models.CharField(max_length=40)
     form_factor = models.CharField(max_length=20)
