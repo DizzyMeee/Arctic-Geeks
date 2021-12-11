@@ -1,16 +1,15 @@
-{% include 'base.html' %}
+{% extends 'base.html' %}
 {% load static %}
-
 {% block content %}
 <div class="row">
     {% for component in components %}
     <div class="col-lg-4 col-md-6 col-sm-12 pb-4">
         <div class="card h-100p-4">
-            <img src="{{ component.gambar.url}}" class="card-img-top" alt="{{ component.nama_komponen}}" style="width: auto; height: 170px; object-fit: contain;">
+            <img src="{{ component.gambar.url }}" class="card-img-top" alt="{{ component.nama_komponen}}" style="width: auto; height: 170px; object-fit: contain;">
             <h4>{{ component.nama_komponen }}</h4>
-            <p>brand: {{ component.brand}} | Series: {{ component.series}}</p>
-            <p>manufaktur: {{ component.manufaktur}}</p>
-            <p>Mulai Dari: Rp{{ component.harga}}</p>
+            <p>brand: {{ component.brand }} | Series: {{ component.series }}</p>
+            <p>manufaktur: {{ component.manufaktur }}</p>
+            <p>Mulai Dari: Rp{{ component.harga }}</p>
             <a class="btn articomp-btn-primary btn-sm addComponentButton" type="submit" id="{{ component.id}}" href="#">+</a>
         </div>
     </div>
