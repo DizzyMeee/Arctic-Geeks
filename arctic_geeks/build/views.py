@@ -1,6 +1,0 @@
-from django.shortcuts import render
-from django.views.generic import View
-
-# Create your views here.
-def buildView(request):
-    return render(request, 'build/build.html', {})
