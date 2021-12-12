@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+    <form method="POST"> {% csrf_token %}
+        <table>
+            {{ form.as_p}}
+            <tr>
+                <td>&nbsp;</td>
+                <td><input type='submit' value="Submit"></td>
+            </tr>
+        </table>
+    </form>
+    <p class="text-center">Don't have an account? <a href="{% url 'account:register' %}">Create an account</a>.</p>
+
+{% endblock body %}

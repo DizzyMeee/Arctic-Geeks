@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %} 
+
+
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+<div class="jumbotron jumbotron-fluid" >
+    <div class="semua"> 
+        <img src="{% static 'assets/jumbotron.png' %}" alt="home gambar" align="right" > 
+      <h1 class="display-3" style="color: white;">Experience the <br> new perspective of
+        </h1>
+            <h2 style="color: 5916C6;" class="building"> Building Your Dream PC</h2>       
+      <p style="color: white;"> Articomp tidak hanya membantu Anda dalam membangun PC Anda sendiri, <br>
+          tetapi juga membantu menyederhanakan proses perakitan PC <br>
+          agar menjadi 100% lebih mudah bagi pengguna kami. <br>
+          Dengan fitur-fitur yang telah disediakan ArtiComp,<br>
+          merakit PC Anda sendiri tidak lagi terasa seperti beban.
+       
+        <p class="lead" >
+      <a class="btn btn-primary btn-lg" href="{% url 'build_pc:build_pc' %}" role="button">Rakit</a>
+    </p>
+    </div>
+  </div>
+{% endblock %}
