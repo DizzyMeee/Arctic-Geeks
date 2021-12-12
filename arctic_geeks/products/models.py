@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils.text import slugify
 
 from polymorphic.models import PolymorphicModel
 
@@ -12,6 +13,10 @@ class Komponen(PolymorphicModel):
     link_tokopedia = models.URLField(blank=True)
     link_shopee = models.URLField(blank=True)
     last_updated = models.DateTimeField(auto_now=True)
+    slug = models.SlugField(blank=True)
+
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.nama_komponen)
 
 class GPU(Komponen):
     manufaktur = models.CharField(max_length=30)

@@ -1,0 +1,177 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %} 
+<center>
+    <div class="rowi">
+            <h1 style="color:white; "  class="judul">Simulasi Rakit PC</h1> <br>
+            <h3 style="color:white;" > Pilih Komponen Pc</h3>
+    </div>
+            
+</center>
+  
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<link rel="stylesheet" href="{% static 'css/build.css' %}">
+
+
+
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				
+			</div>
+			<div class="row">
+						<table class="table">
+						  <thead class="thead-primary">
+						    <tr>
+						    	<th>&nbsp;</th>
+						    	
+						    	<th>Nama Komponen</th>
+						      <th>Harga</th>
+						      
+						      <th>&nbsp;</th>
+                              <th>Link Produk</th>
+						      <th>&nbsp;</th>
+						    </tr>
+						  </thead>
+						  <tbody>
+						    <tr class="alert" role="alert">
+
+						    	<td>
+						    		<div class="img" style="background-image: url(/static/assets/produk.png);"></div>
+						    	</td>
+						      <td>
+						      	<div class="email" >
+						      		<span>AMD Ryzen Threadripper 3990X, Unlocked Desktop Processor without Cooler </span>
+						      		<span>Brand : Amd &nbsp;&nbsp; core : 64 &nbsp;&nbsp; tdp : 250w <br>
+                                         thread : 128 &nbsp;&nbsp; tipe-socket : sTRX4
+                                      </span>
+						      	</div>
+						      </td>
+						      <td>RP.5.214.00,00</td>
+						      <th>&nbsp;</th>
+				          <td >  <img src="/static/cobaa/shopee-logo.png" alt="">  <img src="/static/cobaa/tokped-logo.png" alt=""> </td>
+						      <td>
+						      	<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+				            	<span aria-hidden="true"><i class="fa fa-close"></i></span>
+				          	</button>
+				        	</td>
+						    </tr>
+
+						    <tr class="alert" role="alert">
+						    
+						    	<td>
+						    		
+						    	</td>
+						      <td>
+						      	<div class="email">
+                                      <span>Processor <br></span>
+                                      <span><br>
+                                    </span>
+                                    <p><a href="#"> <br></a></p>
+						      		
+						      	</div>
+						      </td>
+						      <td>-</td>
+						      <th>&nbsp;</th>
+				          <td>-</td>
+						      <td>
+						      	<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+				            	<span aria-hidden="true"><i class="fa fa-close"></i></span>
+				          	</button>
+				        	</td>
+						    </tr>
+
+						    <tr class="alert" role="alert">
+						    	<td>
+						    		
+						    	</td>
+						      <td>
+						      	<div class="email">
+                                       <span>Motherboard <br></span>
+                                      <span><br>
+                                    </span>
+                                    <p><a href="#"></a></p>
+						      	
+						      	</div>
+						      </td>
+						      <td>-</td>
+                              <th>&nbsp;</th>
+				          <td>-</td>
+						      <td>
+						      	<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+				            	<span aria-hidden="true"><i class="fa fa-close"></i></span>
+				          	</button>
+				        	</td>
+						    </tr>
+
+						    <tr class="alert" role="alert">
+
+						    	<td>
+						    		
+						    	</td>
+						      <td>
+						      	<div class="email" >
+                                    <span>Case <br></span>
+                                    <span><br>
+                                  </span>
+                                    <p><a href="#"></a></p>
+						      		
+						      	</div>
+						      </td>
+						      <td>-</td>
+                              <th>&nbsp;</th>
+				          <td>-</td>
+						      <td>
+						      	<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+				            	<span aria-hidden="true"><i class="fa fa-close"></i></span>
+				          	</button>
+				        	</td>
+						    </tr>
+
+						    <tr class="alert" role="alert">
+						    	
+						    	<td class="border-bottom-0">
+						    		
+						    	</td>
+						      <td class="border-bottom-0">
+						      	<div class="email">
+                                    <span>CPU Cooler <br></span>
+                                    <span><br>
+                                  </span>
+                                    <p><a href="#"> </a></p>
+						      		
+						      	</div>
+						      </td>
+						      <td class="border-bottom-0">-</td>
+						      <th>&nbsp;</th>
+				          <td class="border-bottom-0">-</td>
+						      <td class="border-bottom-0">
+						      	<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+				            	<span aria-hidden="true"><i class="fa fa-close"></i></span>
+				          	</button>
+				        	</td>
+						    </tr>
+						  </body>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+{% endblock %}
+
+{% block javaScript %}
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/popper' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
+{% endblock javaScript %}
