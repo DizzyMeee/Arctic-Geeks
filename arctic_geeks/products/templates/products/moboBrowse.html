@@ -4,7 +4,7 @@
 {% block content %}
 <center>
 	<div class="rowi">
-		<h1 style="color:white; " class="judul">Pilih Graphics Card (GPU) </h1> <br>
+		<h1 style="color:white; " class="judul">Pilih Motherboard </h1> <br>
 		<h3 style="color:white;">Pilih Komponen PC</h3>
 	</div>
 </center>
@@ -38,7 +38,7 @@
 				</thead>
 
 				<tbody>
-					{% for component in komponenGPU %}
+					{% for component in komponenMobo %}
 					<tr class="alert" role="alert">
 						
 						<td>
@@ -48,9 +48,9 @@
 						<td>
 							<div class="email">
 								<span>{{component.nama_komponen}}</span>
-								<span>Manufaktur : {{ component.manufaktur}} &nbsp;&nbsp; Series : {{ component.series}} &nbsp;&nbsp; <br>
-									Brand : {{ component.brand}}
-								</span>
+								<span>Manufaktur : {{component.manufaktur}} &nbsp;&nbsp; Tipe-Socket : {{component.socket}} &nbsp;&nbsp; Form-Factor : {{component.form_factor}} <br>
+                                    Brand : {{ component.brand}} &nbsp;&nbsp; Chipset : {{ component.chipset}}
+                                </span>
 							</div>
 						</td>
 						<td>Rp{{component.harga}}</td>

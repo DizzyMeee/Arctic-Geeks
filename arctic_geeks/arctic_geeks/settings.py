@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'products',
     'account',
     'home',
-    'build_pc',
+    'build',
 
     # third party app
     # 'crispy_forms',

@@ -15,7 +15,7 @@
             <a class="nav-link active" aria-current="page" href="{% url 'home:home' %}">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'build_pc:build_pc' %}">Rakit PC</a>
+            <a class="nav-link" href="{% url 'build:build' %}">Rakit PC</a>
           </li>
           {% if user.is_authenticated %}
             <li class="nav-item dropdown">
@@ -28,7 +28,7 @@
                 <li>
                   <hr class="dropdown-divider">
                 </li>
-                <li><a class="dropdown-item" href="{% url 'account:logout' %} ">Logout</a></li>
+                <li><a class="dropdown-item" href="{% url 'account:logout' %}">Logout</a></li>
               </ul>
             </li>
           {% else %}
