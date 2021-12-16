@@ -21,6 +21,8 @@ def login_register_view(request):
             if form.is_valid():
                 form.save()
                 return redirect('account:login-register')
+            else:
+                return render('account/login-register.html',)
 
         elif request.POST.get('submit') == 'login':
             username = request.POST.get('username')

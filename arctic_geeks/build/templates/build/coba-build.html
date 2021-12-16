@@ -1,0 +1,659 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<center>
+	<div class="rowi">
+		<h1 style="color:white; " class="judul">Simulasi Rakit PC</h1> <br>
+		<h3 style="color:white;"> Pilih Komponen PC</h3>
+	</div>
+</center>
+
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="{% static 'css/build.css' %}">
+
+
+<section class="ftco-section">
+	<div class="container">
+		<div class="row justify-content-center">
+
+		</div>
+		<div class="row">
+			<table class="table">
+				<thead class="thead-primary">
+					<tr>
+						<th>&nbsp;</th>
+
+						<th>Nama Komponen</th>
+						<th>Harga</th>
+
+						<th>&nbsp;</th>
+						<th>Link Produk</th>
+						<th>&nbsp;</th>
+					</tr>
+				</thead>
+				<tbody>
+					{% if empty %}
+					<tr class="alert" role="alert">
+						<td>
+							<!-- images -->
+						</td>
+						<td>
+							<div class="email">
+								<span>Processor<br></span>
+								<span><br>
+								</span>
+							</div>
+						</td>
+						<td>-</td>
+						<th>&nbsp;</th>
+						<td>-</td>
+						<td>
+							<p><a href="{% url 'products:cpu' %}"></a></p>
+							<!-- <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+								<span aria-hidden="true"><i class="fa fa-close"></i></span>
+							</button> -->
+						</td>
+					</tr>
+
+					<tr class="alert" role="alert">
+						<td>
+							<!-- images -->
+						</td>
+						<td>
+							<div class="email">
+								<span>Motherboard<br></span>
+								<span><br>
+								</span>
+							</div>
+						</td>
+						<td>-</td>
+						<th>&nbsp;</th>
+						<td>-</td>
+						<td>
+							<p><a href="{% url 'products:mobo' %}"></a></p>
+							<!-- <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+								<span aria-hidden="true"><i class="fa fa-close"></i></span>
+							</button> -->
+						</td>
+					</tr>
+
+					<tr class="alert" role="alert">
+						<td>
+							<!-- images -->
+						</td>
+						<td>
+							<div class="email">
+								<span>Case <br></span>
+								<span><br>
+								</span>
+							</div>
+						</td>
+						<td>-</td>
+						<th>&nbsp;</th>
+						<td>-</td>
+						<td>
+							<p><a href="{% url 'products:case' %}"></a></p>
+							<!-- <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+								<span aria-hidden="true"><i class="fa fa-close"></i></span>
+							</button> -->
+						</td>
+					</tr>
+
+					<tr class="alert" role="alert">
+						<td>
+							<!-- images -->
+						</td>
+						<td>
+							<div class="email">
+								<span>CPU Cooler<br></span>
+								<span><br>
+								</span>
+							</div>
+						</td>
+						<td>-</td>
+						<th>&nbsp;</th>
+						<td>-</td>
+						<td>
+							<p><a href="{% url 'products:cooler' %}"></a></p>
+							<!-- <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+								<span aria-hidden="true"><i class="fa fa-close"></i></span>
+							</button> -->
+						</td>
+					</tr>
+
+					<tr class="alert" role="alert">
+						<td>
+							<!-- images -->
+						</td>
+						<td>
+							<div class="email">
+								<span>Graphics Card<br></span>
+								<span><br>
+								</span>
+							</div>
+						</td>
+						<td>-</td>
+						<th>&nbsp;</th>
+						<td>-</td>
+						<td>
+							<p><a href="{% url 'products:gpu' %}"></a></p>
+							<!-- <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+								<span aria-hidden="true"><i class="fa fa-close"></i></span>
+							</button> -->
+						</td>
+					</tr>
+
+					<tr class="alert" role="alert">
+						<td>
+							<!-- images -->
+						</td>
+						<td>
+							<div class="email">
+								<span>RAM<br></span>
+								<span><br>
+								</span>
+							</div>
+						</td>
+						<td>-</td>
+						<th>&nbsp;</th>
+						<td>-</td>
+						<td>
+							<p><a href="{% url 'products:ram' %}"></a></p>
+							<!-- <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+								<span aria-hidden="true"><i class="fa fa-close"></i></span>
+							</button> -->
+						</td>
+					</tr>
+
+					<tr class="alert" role="alert">
+						<td>
+							<!-- images -->
+						</td>
+						<td>
+							<div class="email">
+								<span>Disk<br></span>
+								<span><br>
+								</span>
+							</div>
+						</td>
+						<td>-</td>
+						<th>&nbsp;</th>
+						<td>-</td>
+						<td>
+							<p><a href="{% url 'products:disk' %}"></a></p>
+							<!-- <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+								<span aria-hidden="true"><i class="fa fa-close"></i></span>
+							</button> -->
+						</td>
+					</tr>
+
+					<tr class="alert" role="alert">
+						<td>
+							<!-- images -->
+						</td>
+						<td>
+							<div class="email">
+								<span>Fan<br></span>
+								<span><br>
+								</span>
+							</div>
+						</td>
+						<td>-</td>
+						<th>&nbsp;</th>
+						<td>-</td>
+						<td>
+							<p><a href="{% url 'products:fan' %}"></a></p>
+							<!-- <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+								<span aria-hidden="true"><i class="fa fa-close"></i></span>
+							</button> -->
+						</td>
+					</tr>
+
+					<tr class="alert" role="alert">
+						<td>
+							<!-- images -->
+						</td>
+						<td>
+							<div class="email">
+								<span>Power Supply<br></span>
+								<span><br>
+								</span>
+							</div>
+						</td>
+						<td>-</td>
+						<th>&nbsp;</th>
+						<td>-</td>
+						<td>
+							<p><a href="{% url 'products:psu' %}"></a></p>
+							<!-- <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+								<span aria-hidden="true"><i class="fa fa-close"></i></span>
+							</button> -->
+						</td>
+					</tr>
+
+					{% else %}
+					{% if build.cpu is not None %}
+					<tr class="alert" role="alert">
+						<td>
+							<img src="{{ build.cpu.gambar.url }}" style="width: auto; height: 75px; object-fit: contain;" alt="{{ component.gpu}}">
+						</td>
+						<td>
+							<div class="email">
+								<span>{{ build.cpu}}<br></span>
+								<span><br>
+								</span>
+							</div>
+						</td>
+						<td>Rp{{ build.cpu.harga}}</td>
+						<th>&nbsp;</th>
+						<td>
+							<a href="https://shopee.co.id/" target="_blank"> <img src='/static/assets/shopee-logo.png' alt='shopee'></a> <a href="https://www.tokopedia.com/" target="_blank"> <img src='/static/assets/tokped-logo.png' alt='tokopedia'></a>
+						</td>
+						<td>
+							<a value="{{ build.cpu.id }}" type="submit" href="{% url 'build:build-update' build.cpu.id %}">Hapus</a>
+						</td>
+					</tr>
+					{% else %}
+					<tr class="alert" role="alert">
+						<td>
+							<!-- images -->
+						</td>
+						<td>
+							<div class="email">
+								<span>Processor<br></span>
+								<span><br>
+								</span>
+							</div>
+						</td>
+						<td>-</td>
+						<th>&nbsp;</th>
+						<td>-</td>
+						<td>
+							<p><a href="{% url 'products:cpu' %}"></a></p>
+							<!-- <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+								<span aria-hidden="true"><i class="fa fa-close"></i></span>
+							</button> -->
+						</td>
+					</tr>
+					{% endif %}
+
+					{% if build.motherboard is not None %}
+					<tr class="alert" role="alert">
+						<td>
+							<img src="{{ build.motherboard.gambar.url }}" style="width: auto; height: 75px; object-fit: contain;" alt="{{ component.gpu}}">
+						</td>
+						<td>
+							<div class="email">
+								<span>{{ build.motherboard}}<br></span>
+								<span><br>
+								</span>
+							</div>
+						</td>
+						<td>Rp{{ build.motherboard.harga}}</td>
+						<th>&nbsp;</th>
+						<td>
+							<a href="https://shopee.co.id/" target="_blank"> <img src='/static/assets/shopee-logo.png' alt='shopee'></a> <a href="https://www.tokopedia.com/" target="_blank"> <img src='/static/assets/tokped-logo.png' alt='tokopedia'></a>
+						</td>
+						<td>
+							<a value="{{ build.motherboard.id }}" type="submit" href="{% url 'build:build-update' build.motherboard.id %}">Hapus</a>
+						</td>
+					</tr>
+					{% else %}
+					<tr class="alert" role="alert">
+						<td>
+							<!-- images -->
+						</td>
+						<td>
+							<div class="email">
+								<span>Motherboard<br></span>
+								<span><br>
+								</span>
+							</div>
+						</td>
+						<td>-</td>
+						<th>&nbsp;</th>
+						<td>-</td>
+						<td>
+							<p><a href="{% url 'products:mobo' %}"></a></p>
+							<!-- <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+								<span aria-hidden="true"><i class="fa fa-close"></i></span>
+							</button> -->
+						</td>
+					</tr>
+					{% endif %}
+
+					{% if build.case is not None %}
+					<tr class="alert" role="alert">
+						<td>
+							<img src="{{ build.case.gambar.url }}" style="width: auto; height: 75px; object-fit: contain;" alt="{{ component.gpu}}">
+						</td>
+						<td>
+							<div class="email">
+								<span>{{ build.case}}<br></span>
+								<span><br>
+								</span>
+							</div>
+						</td>
+						<td>Rp{{ build.case.harga}}</td>
+						<th>&nbsp;</th>
+						<td>
+							<a href="https://shopee.co.id/" target="_blank"> <img src='/static/assets/shopee-logo.png' alt='shopee'></a> <a href="https://www.tokopedia.com/" target="_blank"> <img src='/static/assets/tokped-logo.png' alt='tokopedia'></a>
+						</td>
+						<td>
+							<a value="{{ build.case.id }}" type="submit" href="{% url 'build:build-update' build.case.id %}">Hapus</a>
+						</td>
+					</tr>
+
+					{% else %}
+					<tr class="alert" role="alert">
+						<td>
+							<!-- images -->
+						</td>
+						<td>
+							<div class="email">
+								<span>Case <br></span>
+								<span><br>
+								</span>
+							</div>
+						</td>
+						<td>-</td>
+						<th>&nbsp;</th>
+						<td>-</td>
+						<td>
+							<p><a href="{% url 'products:case' %}"></a></p>
+							<!-- <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+								<span aria-hidden="true"><i class="fa fa-close"></i></span>
+							</button> -->
+						</td>
+					</tr>
+					{% endif %}
+
+					{% if build.cooler is not None %}
+					<tr class="alert" role="alert">
+						<td>
+							<img src="{{ build.cooler.gambar.url }}" style="width: auto; height: 75px; object-fit: contain;" alt="{{ component.gpu}}">
+						</td>
+						<td>
+							<div class="email">
+								<span>{{ build.cooler}}<br></span>
+								<span><br>
+								</span>
+							</div>
+						</td>
+						<td>Rp{{ build.cooler.harga}}</td>
+						<th>&nbsp;</th>
+						<td>
+							<a href="https://shopee.co.id/" target="_blank"> <img src='/static/assets/shopee-logo.png' alt='shopee'></a> <a href="https://www.tokopedia.com/" target="_blank"> <img src='/static/assets/tokped-logo.png' alt='tokopedia'></a>
+						</td>
+						<td>
+							<a value="{{ build.cpu.id }}" type="submit" href="{% url 'build:build-update' build.cooler.id %}">Hapus</a>
+						</td>
+					</tr>
+					{% else %}
+					<tr class="alert" role="alert">
+						<td>
+							<!-- images -->
+						</td>
+						<td>
+							<div class="email">
+								<span>CPU Cooler<br></span>
+								<span><br>
+								</span>
+							</div>
+						</td>
+						<td>-</td>
+						<th>&nbsp;</th>
+						<td>-</td>
+						<td>
+							<p><a href="{% url 'products:cooler' %}"></a></p>
+							<!-- <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+								<span aria-hidden="true"><i class="fa fa-close"></i></span>
+							</button> -->
+						</td>
+					</tr>
+					{% endif %}
+
+					{% if build.gpu is not None %}
+					<tr class="alert" role="alert">
+						<td>
+							<img src="{{ build.gpu.gambar.url }}" style="width: auto; height: 75px; object-fit: contain;" alt="{{ component.gpu}}">
+						</td>
+						<td>
+							<div class="email">
+								<span>{{ build.gpu}}<br></span>
+								<span><br>
+								</span>
+							</div>
+						</td>
+						<td>Rp{{ build.gpu.harga}}</td>
+						<th>&nbsp;</th>
+						<td>
+							<a href="https://shopee.co.id/" target="_blank"> <img src='/static/assets/shopee-logo.png' alt='shopee'></a> <a href="https://www.tokopedia.com/" target="_blank"> <img src='/static/assets/tokped-logo.png' alt='tokopedia'></a>
+						</td>
+						<td>
+							<a value="{{ build.gpu.id }}" type="submit" href="{% url 'build:build-update' build.gpu.id %}">Hapus</a>
+						</td>
+					</tr>
+					{% else %}
+					<tr class="alert" role="alert">
+						<td>
+							<!-- images -->
+						</td>
+						<td>
+							<div class="email">
+								<span>Graphics Card<br></span>
+								<span><br>
+								</span>
+							</div>
+						</td>
+						<td>-</td>
+						<th>&nbsp;</th>
+						<td>-</td>
+						<td>
+							<p><a href="{% url 'products:gpu' %}"></a></p>
+							<!-- <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+								<span aria-hidden="true"><i class="fa fa-close"></i></span>
+							</button> -->
+						</td>
+					</tr>
+					{% endif %}
+
+					{% if build.ram is not None %}
+					<tr class="alert" role="alert">
+						<td>
+							<img src="{{ build.ram.gambar.url }}" style="width: auto; height: 75px; object-fit: contain;" alt="{{ component.gpu}}">
+						</td>
+						<td>
+							<div class="email">
+								<span>{{ build.ram}}<br></span>
+								<span><br>
+								</span>
+							</div>
+						</td>
+						<td>Rp{{ build.ram.harga}}</td>
+						<th>&nbsp;</th>
+						<td>
+							<a href="https://shopee.co.id/" target="_blank"> <img src='/static/assets/shopee-logo.png' alt='shopee'></a> <a href="https://www.tokopedia.com/" target="_blank"> <img src='/static/assets/tokped-logo.png' alt='tokopedia'></a>
+						</td>
+						<td>
+							<a value="{{ build.ram.id }}" type="submit" href="{% url 'build:build-update' build.ram.id %}">Hapus</a>
+						</td>
+					</tr>
+					{% else %}
+					<tr class="alert" role="alert">
+						<td>
+							<!-- images -->
+						</td>
+						<td>
+							<div class="email">
+								<span>RAM<br></span>
+								<span><br>
+								</span>
+							</div>
+						</td>
+						<td>-</td>
+						<th>&nbsp;</th>
+						<td>-</td>
+						<td>
+							<p><a href="{% url 'products:ram' %}"></a></p>
+							<!-- <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+								<span aria-hidden="true"><i class="fa fa-close"></i></span>
+							</button> -->
+						</td>
+					</tr>
+					{% endif %}
+
+					{% if build.disk is not None %}
+					<tr class="alert" role="alert">
+						<td>
+							<img src="{{ build.disk.gambar.url }}" style="width: auto; height: 75px; object-fit: contain;" alt="{{ component.gpu}}">
+						</td>
+						<td>
+							<div class="email">
+								<span>{{ build.disk}}<br></span>
+								<span><br>
+								</span>
+							</div>
+						</td>
+						<td>Rp{{ build.disk.harga}}</td>
+						<th>&nbsp;</th>
+						<td>
+							<a href="https://shopee.co.id/" target="_blank"> <img src='/static/assets/shopee-logo.png' alt='shopee'></a> <a href="https://www.tokopedia.com/" target="_blank"> <img src='/static/assets/tokped-logo.png' alt='tokopedia'></a>
+						</td>
+						<td>
+							<a value="{{ build.disk.id }}" type="submit" href="{% url 'build:build-update' build.disk.id %}">Hapus</a>
+						</td>
+					</tr>
+					{% else %}
+					<tr class="alert" role="alert">
+						<td>
+							<!-- images -->
+						</td>
+						<td>
+							<div class="email">
+								<span>Disk<br></span>
+								<span><br>
+								</span>
+							</div>
+						</td>
+						<td>-</td>
+						<th>&nbsp;</th>
+						<td>-</td>
+						<td>
+							<p><a href="{% url 'products:disk' %}"></a></p>
+							<!-- <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+								<span aria-hidden="true"><i class="fa fa-close"></i></span>
+							</button> -->
+						</td>
+					</tr>
+					{% endif %}
+
+					{% if build.fan is not None %}
+					<tr class="alert" role="alert">
+						<td>
+							<img src="{{ build.fan.gambar.url }}" style="width: auto; height: 75px; object-fit: contain;" alt="{{ component.gpu}}">
+						</td>
+						<td>
+							<div class="email">
+								<span>{{ build.fan}}<br></span>
+								<span><br>
+								</span>
+							</div>
+						</td>
+						<td>Rp{{ build.fan.harga}}</td>
+						<th>&nbsp;</th>
+						<td>
+							<a href="https://shopee.co.id/" target="_blank"> <img src='/static/assets/shopee-logo.png' alt='shopee'></a> <a href="https://www.tokopedia.com/" target="_blank"> <img src='/static/assets/tokped-logo.png' alt='tokopedia'></a>
+						</td>
+						<td>
+							<a value="{{ build.fan.id }}" type="submit" href="{% url 'build:build-update' build.fan.id %}">Hapus</a>
+						</td>
+					</tr>
+					{% else %}
+					<tr class="alert" role="alert">
+						<td>
+							<!-- images -->
+						</td>
+						<td>
+							<div class="email">
+								<span>Fan<br></span>
+								<span><br>
+								</span>
+							</div>
+						</td>
+						<td>-</td>
+						<th>&nbsp;</th>
+						<td>-</td>
+						<td>
+							<p><a href="{% url 'products:fan' %}"></a></p>
+							<!-- <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+								<span aria-hidden="true"><i class="fa fa-close"></i></span>
+							</button> -->
+						</td>
+					</tr>
+					{% endif %}
+
+					{% if build.power_supply is not None %}
+					<tr class="alert" role="alert">
+						<td>
+							<img src="{{ build.power_supply.gambar.url }}" style="width: auto; height: 75px; object-fit: contain;" alt="{{ component.gpu}}">
+						</td>
+						<td>
+							<div class="email">
+								<span>{{ build.power_supply}}<br></span>
+								<span><br>
+								</span>
+							</div>
+						</td>
+						<td>Rp{{ build.power_supply.harga}}</td>
+						<th>&nbsp;</th>
+						<td>
+							<a href="https://shopee.co.id/" target="_blank"> <img src='/static/assets/shopee-logo.png' alt='shopee'></a> <a href="https://www.tokopedia.com/" target="_blank"> <img src='/static/assets/tokped-logo.png' alt='tokopedia'></a>
+						</td>
+						<td>
+							<a value="{{ build.power_supply.id }}" type="submit" href="{% url 'build:build-update' build.power_supply.id %}">Hapus</a>
+						</td>
+					</tr>
+					{% else %}
+					<tr class="alert" role="alert">
+						<td>
+							<!-- images -->
+						</td>
+						<td>
+							<div class="email">
+								<span>Power Supply<br></span>
+								<span><br>
+								</span>
+							</div>
+						</td>
+						<td>-</td>
+						<th>&nbsp;</th>
+						<td>-</td>
+						<td>
+							<p><a href="{% url 'products:psu' %}"></a></p>
+							<!-- <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+								<span aria-hidden="true"><i class="fa fa-close"></i></span>
+							</button> -->
+						</td>
+					</tr>
+					{% endif %}
+					
+					{% endif %}
+				</tbody>
+			</table>
+		</div>
+	</div>
+	</div>
+	</div>
+</section>
+
+<script src="/static/js/jquery.min.js"></script>
+<script src="/static/js/popper.js"></script>
+<script src="/static/js/bootstrap.min.js"></script>
+<script src="/static/js/main.js"></script>
+{% endblock %}

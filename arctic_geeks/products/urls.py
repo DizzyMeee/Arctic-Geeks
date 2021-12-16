@@ -9,7 +9,7 @@ from products.views import (
     psuComponent,
     coolerComponent,
     caseComponent,
-    fanComponent
+    fanComponent,
 )
 app_name = "products"
 urlpatterns = [
