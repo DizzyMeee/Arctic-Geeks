@@ -46,15 +46,16 @@ def buildUpdate(request, id):
     list_case = Case.objects.all()
     list_fan = Fan.objects.all()
     try:
-        request.session.modified = True
         build_id = request.session['build_id']
         print("try")
         print(build_id)
     except:
         new_build = Build()
+        new_build.save()
         print("except")
         request.session['build_id'] = new_build.id
         build_id = new_build.id
+    
     
     build = Build.objects.get(id=build_id)
 
@@ -186,8 +187,7 @@ def buildSave(request):
     del request.session['build_id']
     return HttpResponseRedirect(reverse("build:build"))
 
-def viewExistingBuild(request):
-    pass
+
     
 
 

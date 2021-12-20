@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import redirect, render, HttpResponseRedirect
+from django.urls import reverse
 from build.models import Build
 # Create your views here.
 def profileView(request, username):
@@ -11,5 +12,18 @@ def userBuildView(request, username):
     context = {"build": build}
     return render(request, 'user/profile-rakit.html', context)
 
-def deleteBuild(request):
-    pass
+def deleteBuild(request, username, id):
+    build = Build.objects.get(id=id)
+    build.delete()
+    return redirect('/user/'+ username + '/builds')
+
+def viewExistingBuild(request,username,id):
+    try:
+        request.session.modified = True
+        request.session['build_id'] = id
+        print('viewwtf')
+        build = Build.objects.get(id=id)
+        build.save()
+    except:
+        pass
+    return HttpResponseRedirect(reverse("build:build"))

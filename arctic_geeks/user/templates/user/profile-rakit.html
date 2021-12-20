@@ -47,7 +47,7 @@
               </td>
               <td style="font-style: bold;">{{list.build_title}}</td>
               <td>Rp{{list.total_harga}}</td>
-              <td><img src="/static/css/lihat.png" alt="..."> <img src="/static/css/hilangkan.png" alt="..."></td>
+              <td><a href="{% url 'user:viewBuild' user.username list.id %}"><img src="/static/css/lihat.png" alt="..."></a> <a href="{% url 'user:deleteBuild' user.username list.id %}"><img src="/static/css/hilangkan.png" alt="..."></a></td>
             </tr>
             {% endfor %}
           </tbody>
