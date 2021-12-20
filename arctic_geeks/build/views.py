@@ -1,27 +1,41 @@
-from django.shortcuts import render, HttpResponseRedirect
+from django.shortcuts import redirect, render, HttpResponseRedirect
 from django.urls import reverse
 from django.views.generic import View
+
+from django.contrib.auth.models import User
 
 from .models import Build
 from products.models import Komponen, GPU, CPU, Motherboard, RAM, Disk, PowerSupply, Cooler, Case, Fan
 
 # Create your views here.
 def buildView(request):
+    print("view")
     try:
         build_id = request.session['build_id']
+        print("try")
+        print(build_id)
     except:
+        print("kosong")
         build_id = None
     
     if build_id:
         build = Build.objects.get(id=build_id)
-        context = {"build": build}
+        if build:
+            print("??")
+            context = {"build": build}
+        else:
+            print("!!")
+            context = {"empty": True}
     else:
+        print("asu")
         context = {"empty": True}
     template = 'build/coba-build.html'
     return render(request, template, context)
 
 def buildUpdate(request, id):
     # build = Build.objects.all()[0]
+    # new_total = 0
+    print("update")
     list_gpu = GPU.objects.all()
     list_cpu = CPU.objects.all()
     list_mobo = Motherboard.objects.all()
@@ -32,10 +46,13 @@ def buildUpdate(request, id):
     list_case = Case.objects.all()
     list_fan = Fan.objects.all()
     try:
+        request.session.modified = True
         build_id = request.session['build_id']
+        print("try")
+        print(build_id)
     except:
         new_build = Build()
-        new_build.save()
+        print("except")
         request.session['build_id'] = new_build.id
         build_id = new_build.id
     
@@ -101,8 +118,77 @@ def buildUpdate(request, id):
         else:
             build.fan = komponen
     
+    if build.gpu is None:
+        harga_gpu = 0
+    else:
+        harga_gpu = build.gpu.harga
+    
+    if build.cpu is None:
+        harga_cpu = 0
+    else:
+        harga_cpu = build.cpu.harga
+    
+    if build.motherboard is None:
+        harga_mobo = 0
+    else:
+        harga_mobo = build.motherboard.harga
+    
+    if build.ram is None:
+        harga_ram = 0
+    else:
+        harga_ram = build.ram.harga
+    
+    if build.disk is None:
+        harga_disk = 0
+    else:
+        harga_disk = build.disk.harga
+    
+    if build.power_supply is None:
+        harga_psu = 0
+    else:
+        harga_psu = build.power_supply.harga
+    
+    if build.cooler is None:
+        harga_cooler = 0
+    else:
+        harga_cooler = build.cooler.harga
+    
+    if build.case is None:
+        harga_case = 0
+    else:
+        harga_case = build.case.harga
+    
+    if build.fan is None:
+        harga_fan = 0
+    else:
+        harga_fan = build.fan.harga
+    
+    build.total_harga = harga_gpu + harga_cpu + harga_mobo + harga_ram + harga_psu + harga_disk + harga_cooler + harga_case + harga_fan
+    
     build.save()
     return HttpResponseRedirect(reverse("build:build"))
+
+
+def buildSave(request):
+    print('wtf')
+    try:
+        build_id = request.session['build_id']
+    except:
+        build_id = None
+        
+    if build_id:
+        print("berhasil")
+        build = Build.objects.get(id=build_id)
+        build.owner = request.user.username
+        build.build_title = 'Testing RAKIT'
+        print(build.owner)
+        build.save()
+    del request.session['build_id']
+    return HttpResponseRedirect(reverse("build:build"))
+
+def viewExistingBuild(request):
+    pass
+    
 
 
 # def buildView(request):

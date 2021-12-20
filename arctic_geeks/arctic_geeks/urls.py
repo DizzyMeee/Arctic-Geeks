@@ -25,5 +25,6 @@ urlpatterns = [
     path('account/', include('account.urls', namespace='account')),
     path('products/', include('products.urls', namespace='products')),
     path('build/', include('build.urls', namespace='build')),
-    path('profile/', include('user.urls', namespace='profile'))
+    path('user/<username>/', include('user.urls', namespace='user')),
+    path('list/<shortcode>/', include('list.urls', namespace='list')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

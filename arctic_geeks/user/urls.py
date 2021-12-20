@@ -1,8 +1,14 @@
-from django.urls import path, re_path
-from user.views import profileView, profileAkunView, profileRakitView
-app_name = "profile"
+from django.urls import path
+
+from user.views import(
+    profileView,
+    userBuildView
+)
+
+
+
+app_name = 'user'
 urlpatterns = [
-    re_path(r'^$', profileView, name='profile'),
-    path('akun/', profileAkunView, name='akun'),
-    path('rakit/', profileRakitView, name='rakit'),
+    path('', profileView, name='profile'),
+    path('builds/', userBuildView, name='builds'),
 ]

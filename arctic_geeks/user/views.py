@@ -1,11 +1,15 @@
 from django.shortcuts import render
-
+from build.models import Build
 # Create your views here.
-def profileView(request):
-    return render(request, 'profile-akun.html', {})
+def profileView(request, username):
+    context = {}
+    return render(request, 'user/profile-akun.html', context)
 
-def profileAkunView(request):
-    return render(request, 'profile-akun.html', {})
+def userBuildView(request, username):
+    build = Build.objects.filter(owner=request.user.username)
+    print(build)
+    context = {"build": build}
+    return render(request, 'user/profile-rakit.html', context)
 
-def profileRakitView(request):
-    return render(request, 'profile-rakit.html', {})
+def deleteBuild(request):
+    pass

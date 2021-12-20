@@ -14,15 +14,18 @@ from account.forms import CreateUserForm
 # Create your views here
 def login_register_view(request):
     form = CreateUserForm()
+    context = {'form': form}
 
     if request.method == "POST":
         if request.POST.get('submit') == 'register':
             form = CreateUserForm(request.POST)
             if form.is_valid():
                 form.save()
+                print('berhasil register')
                 return redirect('account:login-register')
             else:
-                return render('account/login-register.html',)
+                print("gagal register")
+                return render(request, 'account/login-register.html', context)
 
         elif request.POST.get('submit') == 'login':
             username = request.POST.get('username')
@@ -32,9 +35,9 @@ def login_register_view(request):
 
             if user is not None:
                 auth.login(request, user)
+                print('berhasil login')
                 return redirect('home:home')
-            
-    context = {'form': form}
+            print('gagal login')
     return render(request, 'account/login-register.html', context)
 
 def logoutView(request):

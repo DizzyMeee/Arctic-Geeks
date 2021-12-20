@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="/static/css/profile-rakit.css">
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="semua">
+    <div class="kiri" align="left">
+      <h3 align="left" style="color: white;">halo, {{ user.username }}</h3>
+      <div class="list-menu">
+        <a href="{% url 'user:profile' user.username %}" style="text-decoration: none;">
+          <p class="akun" align="left" style="color: black;">&nbsp;<img src="/static/assets/profile-view.png" alt="...">
+            &nbsp; Akun </p>
+        </a>
+        <a>
+          <p class="Rakit" align="left" style="color: black;">&nbsp;<img src="/static/assets/profile-laptop.png"
+              alt="..." style="margin-top: 10px;"> &nbsp; Rakit </p>
+        </a>
+        <a href="{% url 'account:logout' %}" style="text-decoration: none;">
+          <p class="logout" align="left" style="color: black;">&nbsp;<img src="/static/assets/Logout.png"
+              alt="...">&nbsp;
+            Logout
+          </p>
+        </a>
+      </div>
+    </div>
+    <div class="kanan" align="right">
+
+      <table align="right">
+        <h3 style="color: white; font-size: 150%;"> Berikut adalah Rakitan Anda yang sudah tersimpan
+          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+          &nbsp; &nbsp; &nbsp; &nbsp; </h3>
+
+        {% if build %}
+        <thead>
+          <tr>
+            <th> &nbsp;Tanggal</th>
+            <th> &nbsp;Nama Rakitan</th>
+            <th> &nbsp;Estimasi Harga</th>
+            <th> </th>
+          </tr>
+          <thead>
+          <tbody>
+            {% for list in build %}
+            <tr>
+              <td>{{ list.dibuat}}<br><br> <span class="buildid" style="font-size: 12px;">Build id:{{list.id}}</span>
+              </td>
+              <td style="font-style: bold;">{{list.build_title}}</td>
+              <td>Rp{{list.total_harga}}</td>
+              <td><img src="/static/css/lihat.png" alt="..."> <img src="/static/css/hilangkan.png" alt="..."></td>
+            </tr>
+            {% endfor %}
+          </tbody>
+          {% else %}
+            <td>
+              <div style="text-align: center;">Tidak Ada Rakitan</div>
+            </td>
+          {% endif %}
+      </table>
+    </div>
+  </div>
+</div>
+{% endblock %}
