@@ -15,6 +15,9 @@ def userBuildView(request, username):
 def deleteBuild(request, username, id):
     build = Build.objects.get(id=id)
     build.delete()
+    new_build = Build()
+    new_build.save()
+    request.session['build_id'] = new_build.id
     return redirect('/user/'+ username + '/builds')
 
 def viewExistingBuild(request,username,id):

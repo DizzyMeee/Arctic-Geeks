@@ -7,7 +7,7 @@ from polymorphic.models import PolymorphicModel
 class Komponen(PolymorphicModel):
     id = models.AutoField(primary_key=True)
     brand = models.CharField(max_length=30)
-    nama_komponen = models.CharField(max_length=120, default="")
+    nama_komponen = models.TextField(max_length=255, default="")
     harga = models.PositiveIntegerField()
     gambar = models.ImageField(upload_to='images/', blank=True)
     link_tokopedia = models.URLField(blank=True)

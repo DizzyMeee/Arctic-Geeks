@@ -49,7 +49,7 @@
 							<div class="email">
 								<span>{{component.nama_komponen}}</span>
 								<span>Brand : {{component.brand}} &nbsp;&nbsp; Tipe-Channel : {{component.tipe_channel}} <br>
-                                    Kapasitas : {{ component.kapasitas}} &nbsp;&nbsp; Kecepatan : {{ component.kecepatan}}
+                                    Kapasitas : {{ component.kapasitas}}GB &nbsp;&nbsp; Kecepatan : {{ component.kecepatan}}MHZ
                                 </span>
 							</div>
 						</td>
@@ -59,7 +59,7 @@
                             <a href="https://shopee.co.id/" target="_blank"> <img src='/static/assets/shopee-logo.png' alt='shopee'></a> <a href="https://www.tokopedia.com/" target="_blank"> <img src='/static/assets/tokped-logo.png' alt='tokopedia'></a>
 						</td>
 						<td>
-                            <a name="btn-choose" value="{{ component.id}}" type="submit" href="{% url 'build:build-update' component.id %}">Tambah</a>
+                            <p><a name="btn-choose" value="{{ component.id}}" type="submit" href="{% url 'build:build-update' component.id %}"></a></p>
 						</td>
 						
 					</tr>
