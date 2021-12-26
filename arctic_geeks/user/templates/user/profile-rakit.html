@@ -9,17 +9,17 @@
       <h3 align="left" style="color: white;">halo, {{ user.username }}</h3>
       <div class="list-menu">
         <a href="{% url 'user:profile' user.username %}" style="text-decoration: none;">
-          <p class="akun" align="left" style="color: black;">&nbsp;<img src="/static/assets/profile-view.png" alt="...">
+          <p class="akun" align="left" style="color: black;">&nbsp;<img src="/static/assets/VectorAkun.png" alt="Akun">
             &nbsp; Akun </p>
         </a>
         <a>
-          <p class="Rakit" align="left" style="color: black;">&nbsp;<img src="/static/assets/profile-laptop.png"
-              alt="..." style="margin-top: 10px;"> &nbsp; Rakit </p>
+          <p class="Rakit" align="left" style="color: black;">&nbsp;<img src="/static/assets/VectorRiwayat.png"
+              alt="Simulasi" style="margin-top: 10px;"> &nbsp; Simulasi </p>
         </a>
         <a href="{% url 'account:logout' %}" style="text-decoration: none;">
           <p class="logout" align="left" style="color: black;">&nbsp;<img src="/static/assets/Logout.png"
-              alt="...">&nbsp;
-            Logout
+              alt="Keluar">&nbsp;
+            Keluar
           </p>
         </a>
       </div>
@@ -47,7 +47,7 @@
               </td>
               <td style="font-style: bold;">{{list.build_title}}</td>
               <td>Rp{{list.total_harga}}</td>
-              <td><a href="{% url 'user:viewBuild' user.username list.id %}"><img src="/static/css/lihat.png" alt="..."></a> <a href="{% url 'user:deleteBuild' user.username list.id %}"><img src="/static/css/hilangkan.png" alt="..."></a></td>
+              <td><a href="{% url 'user:viewBuild' user.username list.id %}"><img src="/static/assets/edit.png" alt="Lihat"></a> <a href="{% url 'user:deleteBuild' user.username list.id %}"><img src="/static/assets/remove.png" alt="Hapus"></a></td>
             </tr>
             {% endfor %}
           </tbody>

@@ -29,7 +29,7 @@ def buildView(request):
     else:
         print("asu")
         context = {"empty": True}
-    template = 'build/coba-build.html'
+    template = 'build/build.html'
     return render(request, template, context)
 
 def buildUpdate(request, id):
