@@ -53,10 +53,12 @@
                                 </span>
 							</div>
 						</td>
-						<td>Rp{{component.harga}}</td>
+						<td>Mulai Dari: <br>
+							Rp{{component.harga}}
+						</td>
 						<th>&nbsp;</th>
 						<td> 
-                            <a href="https://shopee.co.id/" target="_blank"> <img src='/static/assets/shopee-logo.png' alt='shopee'></a> <a href="https://www.tokopedia.com/" target="_blank"> <img src='/static/assets/tokped-logo.png' alt='tokopedia'></a>
+                            <a href="{{component.link_shopee}}" target="_blank"> <img src='/static/assets/shopee-logo.png' alt='shopee'></a> <a href="{{component.link_tokopedia}}" target="_blank"> <img src='/static/assets/tokped-logo.png' alt='tokopedia'></a>
 						</td>
 						<td>
                         	<a name="btn-choose" value="{{ component.id}}" type="submit" href="{% url 'build:build-update' component.id %}"><img src="/static/assets/Button-tambah.png"></a>

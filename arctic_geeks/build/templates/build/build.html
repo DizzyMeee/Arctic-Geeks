@@ -232,10 +232,12 @@
 								</span>
 							</div>
 						</td>
-						<td>Rp{{ build.cpu.harga}}</td>
+						<td>Mulai Dari: <br>
+							Rp{{ build.cpu.harga}}
+						</td>
 						<th>&nbsp;</th>
 						<td>
-							<a href="https://shopee.co.id/" target="_blank"> <img src='/static/assets/shopee-logo.png' alt='shopee'></a> <a href="https://www.tokopedia.com/" target="_blank"> <img src='/static/assets/tokped-logo.png' alt='tokopedia'></a>
+							<a href="{{ build.cpu.link_shopee}}" target="_blank"> <img src='/static/assets/shopee-logo.png' alt='shopee'></a> <a href="{{ build.cpu.link_tokopedia}}" target="_blank"> <img src='/static/assets/tokped-logo.png' alt='tokopedia'></a>
 						</td>
 						<td>
 							<a value="{{ build.cpu.id }}" type="submit" href="{% url 'build:build-update' build.cpu.id %}"><img src="/static/assets/Button-Hapus.png" height="32px"></a>
@@ -274,11 +276,12 @@
 								</span>
 							</div>
 						</td>
-						<td>Rp{{ build.motherboard.harga}}</td>
+						<td>Mulai Dari: <br>
+							Rp{{ build.motherboard.harga}}
+						</td>
 						<th>&nbsp;</th>
 						<td>
-							<a href="https://shopee.co.id/" target="_blank"> <img src='/static/assets/shopee-logo.png' alt='shopee'></a> <a href="https://www.tokopedia.com/" target="_blank"> <img src='/static/assets/tokped-logo.png' alt='tokopedia'></a>
-						</td>
+							<a href="{{ build.motherboard.link_shopee}}" target="_blank"> <img src='/static/assets/shopee-logo.png' alt='shopee'></a> <a href="{{ build.motherboard.link_tokopedia}}" target="_blank"> <img src='/static/assets/tokped-logo.png' alt='tokopedia'></a>
 						<td>
 							<a value="{{ build.motherboard.id }}" type="submit" href="{% url 'build:build-update' build.motherboard.id %}"><img src="/static/assets/Button-Hapus.png" height="32px"></a>
 						</td>
@@ -316,10 +319,12 @@
 								</span>
 							</div>
 						</td>
-						<td>Rp{{ build.case.harga}}</td>
+						<td>Mulai Dari: <br>
+							Rp{{ build.case.harga}}
+						</td>
 						<th>&nbsp;</th>
 						<td>
-							<a href="https://shopee.co.id/" target="_blank"> <img src='/static/assets/shopee-logo.png' alt='shopee'></a> <a href="https://www.tokopedia.com/" target="_blank"> <img src='/static/assets/tokped-logo.png' alt='tokopedia'></a>
+							<a href="{{ build.case.link_shopee}}" target="_blank"> <img src='/static/assets/shopee-logo.png' alt='shopee'></a> <a href="{{ build.case.link_tokopedia}}" target="_blank"> <img src='/static/assets/tokped-logo.png' alt='tokopedia'></a>
 						</td>
 						<td>
 							<a value="{{ build.case.id }}" type="submit" href="{% url 'build:build-update' build.case.id %}"><img src="/static/assets/Button-Hapus.png" height="32px"></a>
@@ -359,10 +364,12 @@
 								</span>
 							</div>
 						</td>
-						<td>Rp{{ build.cooler.harga}}</td>
+						<td>Mulai Dari: <br>
+							Rp{{ build.cooler.harga}}
+						</td>
 						<th>&nbsp;</th>
 						<td>
-							<a href="https://shopee.co.id/" target="_blank"> <img src='/static/assets/shopee-logo.png' alt='shopee'></a> <a href="https://www.tokopedia.com/" target="_blank"> <img src='/static/assets/tokped-logo.png' alt='tokopedia'></a>
+							<a href="{{ build.cooler.link_shopee}}" target="_blank"> <img src='/static/assets/shopee-logo.png' alt='shopee'></a> <a href="{{ build.cooler.link_tokopedia}}" target="_blank"> <img src='/static/assets/tokped-logo.png' alt='tokopedia'></a>
 						</td>
 						<td>
 							<a value="{{ build.cpu.id }}" type="submit" href="{% url 'build:build-update' build.cooler.id %}"><img src="/static/assets/Button-Hapus.png" height="32px"></a>
@@ -401,10 +408,12 @@
 								</span>
 							</div>
 						</td>
-						<td>Rp{{ build.gpu.harga}}</td>
+						<td>Mulai Dari: <br>
+							Rp{{ build.gpu.harga}}
+						</td>
 						<th>&nbsp;</th>
 						<td>
-							<a href="https://shopee.co.id/" target="_blank"> <img src='/static/assets/shopee-logo.png' alt='shopee'></a> <a href="https://www.tokopedia.com/" target="_blank"> <img src='/static/assets/tokped-logo.png' alt='tokopedia'></a>
+							<a href="{{ build.gpu.link_shopee}}" target="_blank"> <img src='/static/assets/shopee-logo.png' alt='shopee'></a> <a href="{{ build.gpu.link_tokopedia}}" target="_blank"> <img src='/static/assets/tokped-logo.png' alt='tokopedia'></a>
 						</td>
 						<td>
 							<a value="{{ build.gpu.id }}" type="submit" href="{% url 'build:build-update' build.gpu.id %}"><img src="/static/assets/Button-Hapus.png" height="32px"></a>
@@ -443,10 +452,12 @@
 								</span>
 							</div>
 						</td>
-						<td>Rp{{ build.ram.harga}}</td>
+						<td>Mulai Dari: <br>
+							Rp{{ build.ram.harga}}
+						</td>
 						<th>&nbsp;</th>
 						<td>
-							<a href="https://shopee.co.id/" target="_blank"> <img src='/static/assets/shopee-logo.png' alt='shopee'></a> <a href="https://www.tokopedia.com/" target="_blank"> <img src='/static/assets/tokped-logo.png' alt='tokopedia'></a>
+							<a href="{{ build.ram.link_shopee}}" target="_blank"> <img src='/static/assets/shopee-logo.png' alt='shopee'></a> <a href="{{ build.ram.link_tokopedia}}" target="_blank"> <img src='/static/assets/tokped-logo.png' alt='tokopedia'></a>
 						</td>
 						<td>
 							<a value="{{ build.ram.id }}" type="submit" href="{% url 'build:build-update' build.ram.id %}"><img src="/static/assets/Button-Hapus.png" height="32px"></a>
@@ -485,10 +496,12 @@
 								</span>
 							</div>
 						</td>
-						<td>Rp{{ build.disk.harga}}</td>
+						<td>Mulai Dari: <br>
+							Rp{{ build.disk.harga}}
+						</td>
 						<th>&nbsp;</th>
 						<td>
-							<a href="https://shopee.co.id/" target="_blank"> <img src='/static/assets/shopee-logo.png' alt='shopee'></a> <a href="https://www.tokopedia.com/" target="_blank"> <img src='/static/assets/tokped-logo.png' alt='tokopedia'></a>
+							<a href="{{ build.disk.link_shopee}}" target="_blank"> <img src='/static/assets/shopee-logo.png' alt='shopee'></a> <a href="{{ build.disk.link_tokopedia}}" target="_blank"> <img src='/static/assets/tokped-logo.png' alt='tokopedia'></a>
 						</td>
 						<td>
 							<a value="{{ build.disk.id }}" type="submit" href="{% url 'build:build-update' build.disk.id %}"><img src="/static/assets/Button-Hapus.png" height="32px"></a>
@@ -527,10 +540,12 @@
 								</span>
 							</div>
 						</td>
-						<td>Rp{{ build.fan.harga}}</td>
+						<td>Mulai Dari: <br>
+							Rp{{ build.fan.harga}}
+						</td>
 						<th>&nbsp;</th>
 						<td>
-							<a href="https://shopee.co.id/" target="_blank"> <img src='/static/assets/shopee-logo.png' alt='shopee'></a> <a href="https://www.tokopedia.com/" target="_blank"> <img src='/static/assets/tokped-logo.png' alt='tokopedia'></a>
+							<a href="{{ build.fan.link_shopee}}" target="_blank"> <img src='/static/assets/shopee-logo.png' alt='shopee'></a> <a href="{{ build.fan.link_tokopedia}}" target="_blank"> <img src='/static/assets/tokped-logo.png' alt='tokopedia'></a>
 						</td>
 						<td>
 							<a value="{{ build.fan.id }}" type="submit" href="{% url 'build:build-update' build.fan.id %}"><img src="/static/assets/Button-Hapus.png" height="32px"></a>
@@ -569,10 +584,12 @@
 								</span>
 							</div>
 						</td>
-						<td>Rp{{ build.power_supply.harga}}</td>
+						<td>Mulai Dari: <br>
+							Rp{{ build.power_supply.harga}}
+						</td>
 						<th>&nbsp;</th>
 						<td>
-							<a href="https://shopee.co.id/" target="_blank"> <img src='/static/assets/shopee-logo.png' alt='shopee'></a> <a href="https://www.tokopedia.com/" target="_blank"> <img src='/static/assets/tokped-logo.png' alt='tokopedia'></a>
+							<a href="{{ build.power_supply.link_shopee}}" target="_blank"> <img src='/static/assets/shopee-logo.png' alt='shopee'></a> <a href="{{ build.power_supply.link_tokopedia}}" target="_blank"> <img src='/static/assets/tokped-logo.png' alt='tokopedia'></a>
 						</td>
 						<td>
 							<a value="{{ build.power_supply.id }}" type="submit" href="{% url 'build:build-update' build.power_supply.id %}"><img src="/static/assets/Button-Hapus.png" height="32px"></a>
