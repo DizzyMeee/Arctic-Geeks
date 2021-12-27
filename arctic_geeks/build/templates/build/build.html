@@ -51,7 +51,7 @@
 					<th>&nbsp;</th>
 					<td>-</td>
 					<td>
-						<a href="{% url 'products:cpu' %}"><img src="/static/assets/Button-tambah.png"></a>
+						<a href="{% url 'products:cpu' %}"><img src="/static/assets/Button-tambah.png" height="32px"></a>
 					</td>
 				</tr>
 
@@ -70,7 +70,7 @@
 					<th>&nbsp;</th>
 					<td>-</td>
 					<td>
-						<a href="{% url 'products:mobo' %}"><img src="/static/assets/Button-tambah.png"></a>
+						<a href="{% url 'products:mobo' %}"><img src="/static/assets/Button-tambah.png" height="32px"></a>
 					</td>
 				</tr>
 
@@ -89,7 +89,7 @@
 					<th>&nbsp;</th>
 					<td>-</td>
 					<td>
-						<a href="{% url 'products:case' %}"><img src="/static/assets/Button-tambah.png"></a>
+						<a href="{% url 'products:case' %}"><img src="/static/assets/Button-tambah.png" height="32px"></a>
 					</td>
 				</tr>
 
@@ -108,7 +108,7 @@
 					<th>&nbsp;</th>
 					<td>-</td>
 					<td>
-						<a href="{% url 'products:cooler' %}"><img src="/static/assets/Button-tambah.png"></a>
+						<a href="{% url 'products:cooler' %}"><img src="/static/assets/Button-tambah.png" height="32px"></a>
 					</td>
 				</tr>
 
@@ -127,7 +127,7 @@
 					<th>&nbsp;</th>
 					<td>-</td>
 					<td>
-						<a href="{% url 'products:gpu' %}"><img src="/static/assets/Button-tambah.png"></a>
+						<a href="{% url 'products:gpu' %}"><img src="/static/assets/Button-tambah.png" height="32px"></a>
 					</td>
 				</tr>
 
@@ -146,7 +146,7 @@
 					<th>&nbsp;</th>
 					<td>-</td>
 					<td>
-						<a href="{% url 'products:ram' %}"><img src="/static/assets/Button-tambah.png"></a>
+						<a href="{% url 'products:ram' %}"><img src="/static/assets/Button-tambah.png" height="32px"></a>
 					</td>
 				</tr>
 
@@ -165,7 +165,7 @@
 					<th>&nbsp;</th>
 					<td>-</td>
 					<td>
-						<a href="{% url 'products:disk' %}"><img src="/static/assets/Button-tambah.png"></a>
+						<a href="{% url 'products:disk' %}"><img src="/static/assets/Button-tambah.png" height="32px"></a>
 					</td>
 				</tr>
 
@@ -184,7 +184,7 @@
 					<th>&nbsp;</th>
 					<td>-</td>
 					<td>
-						<a href="{% url 'products:fan' %}"><img src="/static/assets/Button-tambah.png"></a>
+						<a href="{% url 'products:fan' %}"><img src="/static/assets/Button-tambah.png" height="32px"></a>
 					</td>
 				</tr>
 
@@ -203,13 +203,13 @@
 					<th>&nbsp;</th>
 					<td>-</td>
 					<td>
-						<a href="{% url 'products:psu' %}"><img src="/static/assets/Button-tambah.png"></a>
+						<a href="{% url 'products:psu' %}"><img src="/static/assets/Button-tambah.png" height="32px"></a>
 					</td>
 				</tr>
 			</tbody>
 		</table>
 		<div>
-			<p class="jancuk" align="center" style="color: black;"> Jumlah Estimasi Harga adalah  RP 0 </p>
+			<p class="jancuk"> Jumlah Estimasi Harga adalah  RP 0 </p>
 
 			{% if user.is_authenticated %}
 			<a value="{{ build.id}}"><button class="sayang" align="center " style="color: black;">simpan</button></a>
@@ -238,7 +238,7 @@
 							<a href="https://shopee.co.id/" target="_blank"> <img src='/static/assets/shopee-logo.png' alt='shopee'></a> <a href="https://www.tokopedia.com/" target="_blank"> <img src='/static/assets/tokped-logo.png' alt='tokopedia'></a>
 						</td>
 						<td>
-							<a value="{{ build.cpu.id }}" type="submit" href="{% url 'build:build-update' build.cpu.id %}"><img src="/static/assets/Button-Hapus.png"></a>
+							<a value="{{ build.cpu.id }}" type="submit" href="{% url 'build:build-update' build.cpu.id %}"><img src="/static/assets/Button-Hapus.png" height="32px"></a>
 						</td>
 					</tr>
 					{% else %}
@@ -257,7 +257,7 @@
 						<th>&nbsp;</th>
 						<td>-</td>
 						<td>
-							<a href="{% url 'products:cpu' %}"><img src="/static/assets/Button-tambah.png"></a>
+							<a href="{% url 'products:cpu' %}"><img src="/static/assets/Button-tambah.png" height="32px"></a>
 						</td>
 					</tr>
 					{% endif %}
@@ -280,7 +280,7 @@
 							<a href="https://shopee.co.id/" target="_blank"> <img src='/static/assets/shopee-logo.png' alt='shopee'></a> <a href="https://www.tokopedia.com/" target="_blank"> <img src='/static/assets/tokped-logo.png' alt='tokopedia'></a>
 						</td>
 						<td>
-							<a value="{{ build.motherboard.id }}" type="submit" href="{% url 'build:build-update' build.motherboard.id %}"><img src="/static/assets/Button-Hapus.png"></a>
+							<a value="{{ build.motherboard.id }}" type="submit" href="{% url 'build:build-update' build.motherboard.id %}"><img src="/static/assets/Button-Hapus.png" height="32px"></a>
 						</td>
 					</tr>
 					{% else %}
@@ -299,7 +299,7 @@
 						<th>&nbsp;</th>
 						<td>-</td>
 						<td>
-							<a href="{% url 'products:mobo' %}"><img src="/static/assets/Button-tambah.png"></a>
+							<a href="{% url 'products:mobo' %}"><img src="/static/assets/Button-tambah.png" height="32px"></a>
 						</td>
 					</tr>
 					{% endif %}
@@ -322,7 +322,7 @@
 							<a href="https://shopee.co.id/" target="_blank"> <img src='/static/assets/shopee-logo.png' alt='shopee'></a> <a href="https://www.tokopedia.com/" target="_blank"> <img src='/static/assets/tokped-logo.png' alt='tokopedia'></a>
 						</td>
 						<td>
-							<a value="{{ build.case.id }}" type="submit" href="{% url 'build:build-update' build.case.id %}"><img src="/static/assets/Button-Hapus.png"></a>
+							<a value="{{ build.case.id }}" type="submit" href="{% url 'build:build-update' build.case.id %}"><img src="/static/assets/Button-Hapus.png" height="32px"></a>
 						</td>
 					</tr>
 
@@ -342,7 +342,7 @@
 						<th>&nbsp;</th>
 						<td>-</td>
 						<td>
-							<a href="{% url 'products:case' %}"><img src="/static/assets/Button-tambah.png"></a>
+							<a href="{% url 'products:case' %}"><img src="/static/assets/Button-tambah.png" height="32px"></a>
 						</td>
 					</tr>
 					{% endif %}
@@ -365,7 +365,7 @@
 							<a href="https://shopee.co.id/" target="_blank"> <img src='/static/assets/shopee-logo.png' alt='shopee'></a> <a href="https://www.tokopedia.com/" target="_blank"> <img src='/static/assets/tokped-logo.png' alt='tokopedia'></a>
 						</td>
 						<td>
-							<a value="{{ build.cpu.id }}" type="submit" href="{% url 'build:build-update' build.cooler.id %}"><img src="/static/assets/Button-Hapus.png"></a>
+							<a value="{{ build.cpu.id }}" type="submit" href="{% url 'build:build-update' build.cooler.id %}"><img src="/static/assets/Button-Hapus.png" height="32px"></a>
 						</td>
 					</tr>
 					{% else %}
@@ -384,7 +384,7 @@
 						<th>&nbsp;</th>
 						<td>-</td>
 						<td>
-							<a href="{% url 'products:cooler' %}"><img src="/static/assets/Button-tambah.png"></a>
+							<a href="{% url 'products:cooler' %}"><img src="/static/assets/Button-tambah.png" height="32px"></a>
 						</td>
 					</tr>
 					{% endif %}
@@ -407,7 +407,7 @@
 							<a href="https://shopee.co.id/" target="_blank"> <img src='/static/assets/shopee-logo.png' alt='shopee'></a> <a href="https://www.tokopedia.com/" target="_blank"> <img src='/static/assets/tokped-logo.png' alt='tokopedia'></a>
 						</td>
 						<td>
-							<a value="{{ build.gpu.id }}" type="submit" href="{% url 'build:build-update' build.gpu.id %}"><img src="/static/assets/Button-Hapus.png"></a>
+							<a value="{{ build.gpu.id }}" type="submit" href="{% url 'build:build-update' build.gpu.id %}"><img src="/static/assets/Button-Hapus.png" height="32px"></a>
 						</td>
 					</tr>
 					{% else %}
@@ -426,7 +426,7 @@
 						<th>&nbsp;</th>
 						<td>-</td>
 						<td>
-							<a href="{% url 'products:gpu' %}"><img src="/static/assets/Button-tambah.png"></a>
+							<a href="{% url 'products:gpu' %}"><img src="/static/assets/Button-tambah.png" height="32px"></a>
 						</td>
 					</tr>
 					{% endif %}
@@ -449,7 +449,7 @@
 							<a href="https://shopee.co.id/" target="_blank"> <img src='/static/assets/shopee-logo.png' alt='shopee'></a> <a href="https://www.tokopedia.com/" target="_blank"> <img src='/static/assets/tokped-logo.png' alt='tokopedia'></a>
 						</td>
 						<td>
-							<a value="{{ build.ram.id }}" type="submit" href="{% url 'build:build-update' build.ram.id %}"><img src="/static/assets/Button-Hapus.png"></a>
+							<a value="{{ build.ram.id }}" type="submit" href="{% url 'build:build-update' build.ram.id %}"><img src="/static/assets/Button-Hapus.png" height="32px"></a>
 						</td>
 					</tr>
 					{% else %}
@@ -468,7 +468,7 @@
 						<th>&nbsp;</th>
 						<td>-</td>
 						<td>
-							<a href="{% url 'products:ram' %}"><img src="/static/assets/Button-tambah.png"></a>
+							<a href="{% url 'products:ram' %}"><img src="/static/assets/Button-tambah.png" height="32px"></a>
 						</td>
 					</tr>
 					{% endif %}
@@ -491,7 +491,7 @@
 							<a href="https://shopee.co.id/" target="_blank"> <img src='/static/assets/shopee-logo.png' alt='shopee'></a> <a href="https://www.tokopedia.com/" target="_blank"> <img src='/static/assets/tokped-logo.png' alt='tokopedia'></a>
 						</td>
 						<td>
-							<a value="{{ build.disk.id }}" type="submit" href="{% url 'build:build-update' build.disk.id %}"><img src="/static/assets/Button-Hapus.png"></a>
+							<a value="{{ build.disk.id }}" type="submit" href="{% url 'build:build-update' build.disk.id %}"><img src="/static/assets/Button-Hapus.png" height="32px"></a>
 						</td>
 					</tr>
 					{% else %}
@@ -510,7 +510,7 @@
 						<th>&nbsp;</th>
 						<td>-</td>
 						<td>
-							<a href="{% url 'products:disk' %}"><img src="/static/assets/Button-tambah.png"></a>
+							<a href="{% url 'products:disk' %}"><img src="/static/assets/Button-tambah.png" height="32px"></a>
 						</td>
 					</tr>
 					{% endif %}
@@ -533,7 +533,7 @@
 							<a href="https://shopee.co.id/" target="_blank"> <img src='/static/assets/shopee-logo.png' alt='shopee'></a> <a href="https://www.tokopedia.com/" target="_blank"> <img src='/static/assets/tokped-logo.png' alt='tokopedia'></a>
 						</td>
 						<td>
-							<a value="{{ build.fan.id }}" type="submit" href="{% url 'build:build-update' build.fan.id %}"><img src="/static/assets/Button-Hapus.png"></a>
+							<a value="{{ build.fan.id }}" type="submit" href="{% url 'build:build-update' build.fan.id %}"><img src="/static/assets/Button-Hapus.png" height="32px"></a>
 						</td>
 					</tr>
 					{% else %}
@@ -552,7 +552,7 @@
 						<th>&nbsp;</th>
 						<td>-</td>
 						<td>
-							<a href="{% url 'products:fan' %}"><img src="/static/assets/Button-tambah.png"></a>
+							<a href="{% url 'products:fan' %}"><img src="/static/assets/Button-tambah.png" height="32px"></a>
 						</td>
 					</tr>
 					{% endif %}
@@ -575,7 +575,7 @@
 							<a href="https://shopee.co.id/" target="_blank"> <img src='/static/assets/shopee-logo.png' alt='shopee'></a> <a href="https://www.tokopedia.com/" target="_blank"> <img src='/static/assets/tokped-logo.png' alt='tokopedia'></a>
 						</td>
 						<td>
-							<a value="{{ build.power_supply.id }}" type="submit" href="{% url 'build:build-update' build.power_supply.id %}"><img src="/static/assets/Button-Hapus.png"></a>
+							<a value="{{ build.power_supply.id }}" type="submit" href="{% url 'build:build-update' build.power_supply.id %}"><img src="/static/assets/Button-Hapus.png" height="32px"></a>
 						</td>
 					</tr>
 					{% else %}
@@ -594,7 +594,7 @@
 						<th>&nbsp;</th>
 						<td>-</td>
 						<td>
-							<a href="{% url 'products:psu' %}"><img src="/static/assets/Button-tambah.png"></a>
+							<a href="{% url 'products:psu' %}"><img src="/static/assets/Button-tambah.png" height="32px"></a>
 						</td>
 					</tr>
 					{% endif %}
@@ -603,7 +603,7 @@
 		</table>
 
 		<div>
-			<span class="jancuk" align="center" style="color: black;"> Jumlah Estimasi Harga adalah  Rp{{build.total_harga}}</span>
+			<p class="jancuk"> Jumlah Estimasi Harga adalah  Rp{{build.total_harga}}</p>
 			{% if not empty %}
 				{% if user.is_authenticated %}
 				<a name="save-build" value="{{ build.id }}" href="{% url 'build:build-save' %}"><button class="sayang" align="center "

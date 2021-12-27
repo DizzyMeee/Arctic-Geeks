@@ -1,7 +1,9 @@
-.sticky-footer{
+
+
+#sticky-footer{
+    margin-top: 10%;
     clear: both;
-    position: absolute;
-    bottom: 0;
-    height: 200px;
-    margin-top: 200px;
+    position: relative;
+    margin-bottom:0;
+    width: 100%;
 }

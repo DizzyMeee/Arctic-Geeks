@@ -9,5 +9,4 @@ from home.views import (
 app_name = "home"
 urlpatterns = [
     re_path(r'^$', homeView, name='home'),
-    
 ]

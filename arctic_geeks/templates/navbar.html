@@ -1,46 +1,49 @@
 <!-- Navigation -->
 {% load static %}
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
-  <link rel="stylesheet" href="{% static 'css/navbar.css' %}">   
-    <div class="container">
-      <a class="navbar-brand" href="{% url 'home:home' %}">
-        <img src="{% static 'assets/articomp.png' %}" alt="Logo" height="36">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{% url 'home:home' %}">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'build:build' %}">Rakit PC</a>
-          </li>
-          {% if user.is_authenticated %}
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Welcome, {{ user.username}}
-              </a>
-              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                <li>
-                  <a class="dropdown-item" href="{% url 'user:profile' user.username %}"><img src="/static/assets/profil-button.png"></a>
-                </li>
-                <!-- <li><a class="dropdown-item" href="#">Logout</a></li> -->
-                <li>
-                  <hr class="dropdown-divider">
-                </li>
-                <li>
-                  <a class="dropdown-item" href="{% url 'account:logout' %}"><img src="/static/assets/logout-button.png"></a>
-                </li>
-              </ul>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top" style="background-color: #2a324e !important;">
+  <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+  <div class="container">
+    <a class="navbar-brand" href="{% url 'home:home' %}">
+      <img src="{% static 'assets/articomp.png' %}" alt="Logo" height="36">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{% url 'home:home' %}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'build:build' %}">Rakit PC</a>
+        </li>
+        {% if user.is_authenticated %}
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Welcome, {{ user.username}}
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+            <li>
+              <a class="dropdown-item" href="{% url 'user:profile' user.username %}"><img
+                  src="/static/assets/profil-button.png"></a>
             </li>
-          {% else %}
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'account:login-register' %}">Login/Register</a>
+            <li>
+              <hr class="dropdown-divider">
             </li>
-          {% endif %}
-        </ul>
-      </div>
+            <li>
+              <a class="dropdown-item" href="{% url 'account:logout' %}"><img
+                  src="/static/assets/logout-button.png"></a>
+            </li>
+          </ul>
+        </li>
+        {% else %}
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'account:login-register' %}">Login/Register</a>
+        </li>
+        {% endif %}
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>
