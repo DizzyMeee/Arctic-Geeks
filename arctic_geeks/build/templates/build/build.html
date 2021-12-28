@@ -623,7 +623,7 @@
 			<p class="jancuk"> Jumlah Estimasi Harga adalah  Rp{{build.total_harga}}</p>
 			{% if not empty %}
 				{% if user.is_authenticated %}
-				<a name="save-build" value="{{ build.id }}" href="{% url 'build:build-save' %}"><button onclick="myFunction()" class="sayang" align="center "
+				<a name="save-build" id="save_save" value="{{ build.id }}" href="{% url 'build:build-save' 'name' %}"><button onclick="myFunction()" class="sayang" align="center "
 						style="color: black;">simpan</button></a>
 				{% else %}
 				<a href="{% url 'account:login' %}" <button class="sayang" align="center " style="color: black;">Login untuk
@@ -636,16 +636,13 @@
 </section>
 <script>
 	function myFunction() {
-		let text;
-		let person = prompt("Please enter your name:", "Harry Potter");
-		if (person == null || person == "") {
-			text = "User cancelled the prompt.";
-		} else {
-			text = "Hello " + person + "! How are you today?";
-		}
-		document.getElementById("demo").innerHTML = text;
+		var link = document.querySelector("#save_save");
+		let name = prompt("Masukkan Nama Build : ", "");
+		let new_link = "save/" + name;
+		link.setAttribute("href",new_link);
 	}
 </script>
+
 <script src="/static/js/jquery.min.js"></script>
 <script src="/static/js/popper.js"></script>
 <script src="/static/js/bootstrap.min.js"></script>
