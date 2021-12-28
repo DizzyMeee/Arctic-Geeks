@@ -211,11 +211,11 @@
 		<div>
 			<p class="jancuk"> Jumlah Estimasi Harga adalah  RP 0 </p>
 
-			{% if user.is_authenticated %}
+			<!-- {% if user.is_authenticated %}
 			<a value="{{ build.id}}"><button class="sayang" align="center " style="color: black;">simpan</button></a>
 			{% else %}
 			<a href="{% url 'account:login' %}"<button class="sayang" align="center " style="color: black;">Login untuk menyimpan</button></a>
-			{% endif %}
+			{% endif %} -->
 		</div>
 
 				{% else %}
@@ -623,7 +623,7 @@
 			<p class="jancuk"> Jumlah Estimasi Harga adalah  Rp{{build.total_harga}}</p>
 			{% if not empty %}
 				{% if user.is_authenticated %}
-				<a name="save-build" value="{{ build.id }}" href="{% url 'build:build-save' %}"><button class="sayang" align="center "
+				<a name="save-build" value="{{ build.id }}" href="{% url 'build:build-save' %}"><button onclick="myFunction()" class="sayang" align="center "
 						style="color: black;">simpan</button></a>
 				{% else %}
 				<a href="{% url 'account:login' %}" <button class="sayang" align="center " style="color: black;">Login untuk
@@ -634,8 +634,21 @@
 		{% endif %}
 	</div>
 </section>
+<script>
+	function myFunction() {
+		let text;
+		let person = prompt("Please enter your name:", "Harry Potter");
+		if (person == null || person == "") {
+			text = "User cancelled the prompt.";
+		} else {
+			text = "Hello " + person + "! How are you today?";
+		}
+		document.getElementById("demo").innerHTML = text;
+	}
+</script>
 <script src="/static/js/jquery.min.js"></script>
 <script src="/static/js/popper.js"></script>
 <script src="/static/js/bootstrap.min.js"></script>
 <script src="/static/js/main.js"></script>
+
 {% endblock %}

@@ -14,6 +14,7 @@ def gpuComponent(request):
 def cpuComponent(request):
     cpuComponents = CPU.objects.all()
     return render(request, 'products/cpuBrowse.html', {'komponenCPU' : cpuComponents})
+    
 
 def moboComponent(request):
     moboComponents = Motherboard.objects.all()
@@ -42,6 +43,8 @@ def caseComponent(request):
 def fanComponent(request):
     fanComponents = Fan.objects.all()
     return render(request, 'products/fanBrowse.html', {'komponenFan' : fanComponents})
+
+
 
 # def gpuDicoba(request):
     # if request.method == "POST":

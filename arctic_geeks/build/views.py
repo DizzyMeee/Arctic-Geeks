@@ -181,11 +181,11 @@ def buildSave(request):
         print("berhasil")
         build = Build.objects.get(id=build_id)
         build.owner = request.user.username
-        build.build_title = 'Testing RAKIT'
+        build.build_title = 'Testing Rakit'
         print(build.owner)
         build.save()
     del request.session['build_id']
-    return HttpResponseRedirect(reverse("build:build"))
+    return render(request, 'build/success.html')
 
 
     
