@@ -5,26 +5,25 @@
 
 <div class="jumbotron jumbotron-fluid">
   <div class="semua">
-    <div class="kiri" align="left">
+    <div class="kiri">
       <h3 align="left" style="color: white;">halo, {{ user.username }}</h3>
       <div class="list-menu">
         <a href="{% url 'user:profile' user.username %}" style="text-decoration: none;">
-          <p class="akun" align="left" style="color: black;">&nbsp;<img src="/static/assets/VectorAkun.png" alt="Akun">
-            &nbsp; Akun </p>
+          <p class="akun" align="left" style="color: black;">&nbsp;<img src="/static/assets/VectorAkun.png" alt="Akun" width="36">
+            &nbsp;&nbsp; Akun </p>
         </a>
         <a>
           <p class="Rakit" align="left" style="color: black;">&nbsp;<img src="/static/assets/VectorRiwayat.png"
-              alt="Simulasi" style="margin-top: 10px;"> &nbsp; Simulasi </p>
+              alt="Simulasi" width="36"> &nbsp;&nbsp; Simulasi </p>
         </a>
         <a href="{% url 'account:logout' %}" style="text-decoration: none;">
           <p class="logout" align="left" style="color: black;">&nbsp;<img src="/static/assets/Logout.png"
-              alt="Keluar">&nbsp;
-            Keluar
+              alt="Keluar" width="36">&nbsp;&nbsp; Keluar
           </p>
         </a>
       </div>
     </div>
-    <div class="kanan" align="right">
+    <div class="kanan">
 
       <table align="right">
         <h3 style="color: white; font-size: 150%;"> Berikut adalah Rakitan Anda yang sudah tersimpan

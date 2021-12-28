@@ -4,6 +4,8 @@ from django.contrib.auth.views import LogoutView
 from django.shortcuts import render, redirect
 # from django.contrib.auth.models import User
 from django.contrib import auth
+from django.contrib.auth.models import User
+from django.contrib import messages
 # from django.contrib import messages
 
 from account.forms import CreateUserForm
@@ -12,33 +14,72 @@ from account.forms import CreateUserForm
 # from account.forms import NewUserForm
 
 # Create your views here
-def login_register_view(request):
-    form = CreateUserForm()
-    context = {'form': form}
+# def login_register_view(request):
+#     form = CreateUserForm()
+#     context = {'form': form}
 
-    if request.method == "POST":
-        if request.POST.get('submit') == 'register':
-            form = CreateUserForm(request.POST)
-            if form.is_valid():
-                form.save()
-                print('berhasil register')
-                return redirect('account:login-register')
+#     if request.method == "POST":
+#         if request.POST.get('submit') == 'register':
+#             form = CreateUserForm(request.POST)
+#             if form.is_valid():
+#                 form.save()
+#                 print('berhasil register')
+#                 return redirect('account:login-register')
+#             else:
+#                 print("gagal register")
+#                 return render(request, 'account/login-register.html', context)
+
+#         elif request.POST.get('submit') == 'login':
+#             username = request.POST.get('username')
+#             password = request.POST.get('password')
+
+#             user = auth.authenticate(request, username=username, password=password)
+
+#             if user is not None:
+#                 auth.login(request, user)
+#                 print('berhasil login')
+#                 return redirect('home:home')
+#             print('gagal login')
+#     return render(request, 'account/login-register.html', context)
+
+def login(request):
+    if request.method=='POST':
+        username = request.POST['username']
+        password = request.POST['password']
+        user = auth.authenticate(username=username, password=password)
+        
+        if user is not None:
+            auth.login(request, user)
+            return redirect('home:home')
+        else:
+            messages.info(request, 'Username/Password salah')
+            return redirect('account:login')
+    else:
+        return render(request,'account/login.html')
+    
+def register(request):
+    if request.method == 'POST':
+        username = request.POST['username']
+        email = request.POST['email']
+        password = request.POST['password1']
+        password2 = request.POST['password2']
+
+        if password == password2:
+            if User.objects.filter(email=email).exists():
+                messages.info(request, 'Email Sudah Terdaftar')
+                return redirect('account:register')
+            elif User.objects.filter(username=username).exists():
+                messages.info(request, 'Username Sudah Terdaftar')
+                return redirect('account:register')
             else:
-                print("gagal register")
-                return render(request, 'account/login-register.html', context)
-
-        elif request.POST.get('submit') == 'login':
-            username = request.POST.get('username')
-            password = request.POST.get('password')
-
-            user = auth.authenticate(request, username=username, password=password)
-
-            if user is not None:
-                auth.login(request, user)
-                print('berhasil login')
-                return redirect('home:home')
-            print('gagal login')
-    return render(request, 'account/login-register.html', context)
+                user = User.objects.create_user(username=username,email=email,password=password)
+                user.save()
+                return redirect('account:login')
+        else:
+            messages.info(request, 'Password tidak cocok')
+            return redirect('account:register')
+    else:
+        return render(request, 'account/register.html')
 
 def logoutView(request):
     auth.logout(request)

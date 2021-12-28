@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %} 
+
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+<main>
+	<div class="login-wrap">
+	
+		<div class="box">
+			<div class="items">
+				<h1>Login Akun</h1>
+			</div>
+			<div class="invalid">
+				{% for message in messages %}
+				<h3>{{message}}</h3>
+				{% endfor %}
+			</div>
+			<div class="items">
+				<form method="POST" action="login" id="login-form">
+					{% csrf_token %}
+					<div class="sign-in-htm">
+						<div class="group">
+							<label for="user" class="label">Username</label>
+							<input type="text" class="input" name="username">
+						</div>
+						<div class="group">
+							<label for="pass" class="label">Kata Sandi</label>
+							<input type="password" class="input" data-type="password" name="password">
+						</div>
+						<div class="group">
+							<input type="submit" class="button" value="Masuk" name="submit">
+						</div>
+					</div>
+				</form>
+				<div class="items">
+					<h3>Belum punya akun? <a href="{% url 'account:register' %}">Daftar</a></h3>
+				</div>
+			</div>
+		</div>
+	</div>
+</main>
+
+{% endblock %}
