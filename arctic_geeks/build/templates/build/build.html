@@ -653,9 +653,13 @@
 <script>
 	function myFunction() {
 		var link = document.querySelector("#save_save");
-		let name = prompt("Masukkan Nama Build : ", "");
-		let new_link = "save/" + name;
-		link.setAttribute("href",new_link);
+		var name = prompt("Masukkan Nama Rakitan : ", "");
+		if (name.trim() == null || name.trim() == "" ) {
+			link.setAttribute("href", "#");
+		} else {
+			let new_link = "save/" + name;
+			link.setAttribute("href", new_link);
+		}
 	}
 </script>
 
