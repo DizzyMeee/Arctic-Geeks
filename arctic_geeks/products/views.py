@@ -30,7 +30,7 @@ def moboComponentFiltered(request,ff,socket):
             if ff == 'ITX':
                 moboComponents = Motherboard.objects.filter(form_factor=ff,socket=socket)
             elif ff == 'M-ATX':
-                moboComponents = Motherboard.objects.filter(form_factor__in=['M-ATX',ff],socket=socket)
+                moboComponents = Motherboard.objects.filter(form_factor__in=['ITX',ff],socket=socket)
             else:
                 moboComponents = Motherboard.objects.filter(socket=socket)
             return render(request, 'products/moboBrowse.html', {'komponenMobo' : moboComponents})
@@ -88,10 +88,10 @@ def caseComponentFiltered(request,ff):
     list_Motherboard = list(Motherboard.objects.values_list('form_factor'))
     for value in list_Motherboard:
         if ff in value:
-            if ff == 'ITX':
+            if ff == 'ATX':
                 caseComponents = Case.objects.filter(form_factor=ff)
             elif ff == 'M-ATX':
-                caseComponents = Case.objects.filter(form_factor__in=['M-ATX',ff])
+                caseComponents = Case.objects.filter(form_factor__in=['ATX',ff])
             else:
                 caseComponents = Case.objects.all()
             return render(request, 'products/caseBrowse.html', {'komponenCase' : caseComponents})
