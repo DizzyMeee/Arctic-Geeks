@@ -259,7 +259,11 @@
 						<th>&nbsp;</th>
 						<td>-</td>
 						<td>
+							{% if build.motherboard is not None %}
+							<a href="{% url 'products:cpuFilter' build.motherboard.socket %}"><img src="/static/assets/Button-tambah.png" height="32px"></a>
+							{% else %}
 							<a href="{% url 'products:cpu' %}"><img src="/static/assets/Button-tambah.png" height="32px"></a>
+							{% endif %}
 						</td>
 					</tr>
 					{% endif %}
@@ -302,7 +306,15 @@
 						<th>&nbsp;</th>
 						<td>-</td>
 						<td>
+							{% if build.case is not None and build.cpu is not None %}
+							<a href="{% url 'products:moboFilter' build.case.form_factor build.cpu.socket %}"><img src="/static/assets/Button-tambah.png" height="32px"></a>
+							{% elif build.cpu is not None %}
+							<a href="{% url 'products:moboFilter_satu' build.cpu.socket %}"><img src="/static/assets/Button-tambah.png" height="32px"></a>
+							{% elif build.case is not None %}
+							<a href="{% url 'products:moboFilter_satu' build.case.form_factor %}"><img src="/static/assets/Button-tambah.png" height="32px"></a>
+							{% else %}
 							<a href="{% url 'products:mobo' %}"><img src="/static/assets/Button-tambah.png" height="32px"></a>
+							{% endif %}
 						</td>
 					</tr>
 					{% endif %}
@@ -347,7 +359,11 @@
 						<th>&nbsp;</th>
 						<td>-</td>
 						<td>
+							{% if build.motherboard is not None %}
+							<a href="{% url 'products:caseFilter' build.motherboard.form_factor %}"><img src="/static/assets/Button-tambah.png" height="32px"></a>
+							{% else %}
 							<a href="{% url 'products:case' %}"><img src="/static/assets/Button-tambah.png" height="32px"></a>
+							{% endif %}
 						</td>
 					</tr>
 					{% endif %}
@@ -372,7 +388,7 @@
 							<a href="{{ build.cooler.link_shopee}}" target="_blank"> <img src='/static/assets/shopee-logo.png' alt='shopee'></a> <a href="{{ build.cooler.link_tokopedia}}" target="_blank"> <img src='/static/assets/tokped-logo.png' alt='tokopedia'></a>
 						</td>
 						<td>
-							<a value="{{ build.cpu.id }}" type="submit" href="{% url 'build:build-update' build.cooler.id %}"><img src="/static/assets/Button-Hapus.png" height="32px"></a>
+							<a value="{{ build.cooler.id }}" type="submit" href="{% url 'build:build-update' build.cooler.id %}"><img src="/static/assets/Button-Hapus.png" height="32px"></a>
 						</td>
 					</tr>
 					{% else %}

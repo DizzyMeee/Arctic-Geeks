@@ -48,7 +48,7 @@
 						<td>
 							<div class="email">
 								<span>{{component.nama_komponen}}</span>
-								<span>Brand : {{component.brand}} &nbsp;&nbsp; Tipe-Channel : {{component.tipe_channel}} <br>
+								<span style="color: #5b5b5b;">Brand : {{component.brand}} &nbsp;&nbsp; Tipe-Channel : {{component.tipe_channel}} <br>
                                     Kapasitas : {{ component.kapasitas}}GB &nbsp;&nbsp; Kecepatan : {{ component.kecepatan}}MHZ
                                 </span>
 							</div>
@@ -63,7 +63,6 @@
 						<td>
                         	<a name="btn-choose" value="{{ component.id}}" type="submit" href="{% url 'build:build-update' component.id %}"><img src="/static/assets/Button-tambah.png"></a>
 						</td>
-						
 					</tr>
 					{% endfor %}
 					</body>
