@@ -8267,7 +8267,7 @@ h1, h2, h3, h4, h5,
     background: linear-gradient(90deg, #5916C6 23.96%, #E22AAC 100%);
   }
 
-.jancuk{
+.info-harga{
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 700;
   font-size: 20;
@@ -8283,7 +8283,7 @@ h1, h2, h3, h4, h5,
   color: black;
 }
 
-.sayang{
+.simpan-build{
 font-family: Arial, Helvetica, sans-serif;
 font-weight: 700;
 font-size: 20;

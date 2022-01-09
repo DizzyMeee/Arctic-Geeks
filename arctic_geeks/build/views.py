@@ -9,32 +9,24 @@ from products.models import Komponen, GPU, CPU, Motherboard, RAM, Disk, PowerSup
 
 # Create your views here.
 def buildView(request):
-    print("view")
     try:
         build_id = request.session['build_id']
-        print("try")
         print(build_id)
     except:
-        print("kosong")
         build_id = None
     
     if build_id:
         build = Build.objects.get(id=build_id)
         if build:
-            print("??")
             context = {"build": build}
         else:
-            print("!!")
             context = {"empty": True}
     else:
-        print("asu")
         context = {"empty": True}
     template = 'build/build.html'
     return render(request, template, context)
 
 def buildUpdate(request, id):
-    # build = Build.objects.all()[0]
-    # new_total = 0
     print("update")
     list_gpu = GPU.objects.all()
     list_cpu = CPU.objects.all()
@@ -47,12 +39,10 @@ def buildUpdate(request, id):
     list_fan = Fan.objects.all()
     try:
         build_id = request.session['build_id']
-        print("try")
         print(build_id)
     except:
         new_build = Build()
         new_build.save()
-        print("except")
         request.session['build_id'] = new_build.id
         build_id = new_build.id
     
@@ -171,37 +161,18 @@ def buildUpdate(request, id):
 
 
 def buildSave(request, nama):
-    print('wtf')
     try:
         build_id = request.session['build_id']
     except:
         build_id = None
         
     if build_id:
-        print("berhasil")
         build = Build.objects.get(id=build_id)
         build.owner = request.user.username
         build.build_title = nama
-        # print(request.GET.get('nama_build'))
         build.save()
     del request.session['build_id']
     return HttpResponseRedirect(reverse("build:save-success"))
 
 def buildSuccess(request):
     return render(request,'build/success.html')
-
-
-    
-
-
-# def buildView(request):
-#     return render(request, 'build/build.html', {})
-
-# class BuildView(View):
-#     def render(self, request):
-#         return render(request, 'build/build.html', {'component_list': self.component_list})
-    
-#     def get(self, request, *args, **kwargs):
-#         self.component_list = Build.get_component_dict()
-
-#         return self.render(request)

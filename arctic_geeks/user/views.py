@@ -8,7 +8,6 @@ def profileView(request, username):
 
 def userBuildView(request, username):
     build = Build.objects.filter(owner=request.user.username)
-    print(build)
     context = {"build": build}
     return render(request, 'user/profile-rakit.html', context)
 
@@ -24,7 +23,6 @@ def viewExistingBuild(request,username,id):
     try:
         request.session.modified = True
         request.session['build_id'] = id
-        print('viewwtf')
         build = Build.objects.get(id=id)
         build.save()
     except:

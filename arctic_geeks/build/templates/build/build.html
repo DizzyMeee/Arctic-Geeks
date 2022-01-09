@@ -209,13 +209,7 @@
 			</tbody>
 		</table>
 		<div>
-			<p class="jancuk"> Jumlah Estimasi Harga adalah  RP 0 </p>
-
-			<!-- {% if user.is_authenticated %}
-			<a value="{{ build.id}}"><button class="sayang" align="center " style="color: black;">simpan</button></a>
-			{% else %}
-			<a href="{% url 'account:login' %}"<button class="sayang" align="center " style="color: black;">Login untuk menyimpan</button></a>
-			{% endif %} -->
+			<p class="info-harga"> Jumlah Estimasi Harga adalah  RP 0 </p>
 		</div>
 
 				{% else %}
@@ -636,13 +630,13 @@
 		</table>
 
 		<div>
-			<p class="jancuk"> Jumlah Estimasi Harga adalah  Rp{{build.total_harga}}</p>
+			<p class="info-harga"> Jumlah Estimasi Harga adalah  Rp{{build.total_harga}}</p>
 			{% if not empty %}
 				{% if user.is_authenticated %}
-				<a name="save-build" id="save_save" value="{{ build.id }}" href="{% url 'build:build-save' 'name' %}"><button onclick="myFunction()" class="sayang" align="center "
+				<a name="save-build" id="save_save" value="{{ build.id }}" href="{% url 'build:build-save' 'name' %}"><button onclick="myFunction()" class="simpan-build" align="center "
 						style="color: black;">simpan</button></a>
 				{% else %}
-				<a href="{% url 'account:login' %}" <button class="sayang" align="center " style="color: black;">Login untuk
+				<a href="{% url 'account:login' %}" <button class="simpan-build" align="center " style="color: black;">Login untuk
 					menyimpan</button></a>
 				{% endif %}
 			{% endif %}

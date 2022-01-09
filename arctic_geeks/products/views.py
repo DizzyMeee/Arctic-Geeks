@@ -101,11 +101,3 @@ def caseComponentFiltered(request,ff):
 def fanComponent(request):
     fanComponents = Fan.objects.all().order_by('nama_komponen')
     return render(request, 'products/fanBrowse.html', {'komponenFan' : fanComponents})
-
-
-
-# def gpuDicoba(request):
-    # if request.method == "POST":
-    #     gpu_dipilih = request.POST['btn-choose']   
-    # komponenGPU = GPU.objects.all()
-    # return render(request, 'products/gpunihbos.html', {'komponenGPU' : komponenGPU})
