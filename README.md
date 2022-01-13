@@ -34,11 +34,15 @@
      
 <hr>
 
-5. **Jalankan command `pip install -r requirements.txt` untuk menginstall packages yang dibutuhkan pada project ini.**
+5. **Install packages yang dibutuhkan oleh project**
+
+     Jalankan command `pip install -r requirements.txt` untuk menginstall packages yang dibutuhkan.
      
 <hr>
 
-6. **Jalankan program *manage.py* dengan command `py manage.py runserver`**
+6. **Menjalankan server django**
+
+     menjalankan program *manage.py* dengan cara jalankan command `py manage.py runserver`
 
 <hr>
 
