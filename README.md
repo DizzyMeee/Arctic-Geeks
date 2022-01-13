@@ -37,6 +37,11 @@
 5. **Jalankan command `pip install -r requirements.txt` untuk menginstall packages yang dibutuhkan pada project ini.**
      
 <hr>
+
+6. **Jalankan program *manage.py* dengan command `py manage.py runserver`**
+
+<hr>
+
 <br><br><br><br><br>
 
 ### Catatan bagi yang memiliki akses repository:
