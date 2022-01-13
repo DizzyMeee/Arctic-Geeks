@@ -1,5 +1,5 @@
 <p align="center">
-     <img src="arctic_geeks/static/assets/articomp.png">
+     <img src="arctic_geeks/static/assets/articomp.png" width=300>
 </p>
 <br><br>
 
