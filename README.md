@@ -39,5 +39,5 @@
 <hr>
 <br><br><br><br><br>
 
-### Catatan:
+### Catatan bagi yang memiliki akses repository:
 - [ ] Masih terdapat kesalahan seperti nama folder tidak sesuai dengan nama product
