@@ -1,40 +1,31 @@
-# How 2 use django
+# Project Akhir Semester Rekayasa Perangkat Lunak
+### Anggota Kelompok
+* Belvin Shandy Aurora (11200910000052)
+* Zahra Syafiq (11200910000061)
+* Riandi Nandaputra (11200910000062)
+* Andy Rachman (11200910000067)
 
-## 1. python version 3.9.x
-```
-py --version
-```
+## Cara Menggunakan
+1. Install/cek Python apakah sudah terinstall pada perangkat
 
-## 2. create venv (tentukan folder untuk menampung virtual environment)
-```
-virtualenv -p python3 .
-```
+     Bisa didownload pada [link berikut](https://www.python.org/downloads/)
+     
+     Lalu cek apakah sudah terinstall dengan cara menjalankan command `py --version`
+     
+     ***note: disarankan menggunakan Python versi 3.9.x keatas***
+     <hr>
 
-## 3. mengaktifkan venv di command prompt
+2. Buat virtual environment
 
-lokasi folder yang dibuka saat ini adalah folder virtual environment yang dibuat
-```
-Scripts/activate
-```
+     jalankan command `python -m venv .venv` dimana *.venv* merupakan nama virtual environmentnya, silahkan ganti dengan nama yang lain.
+     <hr>
 
-## 4. install django in venv
-```
-pip install Django
-```
-catatan: Django yang terinstall hanya ada di dalam virtual environment tidak universal kayaknya...
+3. Aktifkan virtual environment yang telah dibuat
 
-## 5. clone git ini ke dalam venvnya (ini sama saja kayak django-admin startproject)
-masuk ke folder yang ada requirements.txt nya, lalu install requirement tersebut kedalam virtual environmentnya:
-```
-pip install -r requirements.txt
-```
+     jalankan command `Scripts/activate`
+     <hr>
 
-masuk ke folder yang ada manage.py di dalamnya lalu run command di command prompt:
-```
-py manage.py migrate
-```
-
-### catatan:
-disarankan clone ke folder local kalian dan install github desktop jadi ketika ada update atau tambahan dari kalian cukup upload ke local folder lalu push dari aplikasi github desktopnya atau pull ketika ada yang update di github ini sehingga kalian tidak tertinggal codenya
-
-catatan juga kalo mau push (publish ke github ini) pastikan sudah dicek, apakah sudah bagus untuk dipakai oleh teman-teman yang lain karena ketika sudah dipublish kemungkinan code yang lalu akan overwrite ketika kalian melakukan perubahan pada code yang sudah ada (update)
+4. Clone folder GitHub ini ke dalam virtual environmentnya
+     
+     <hr>
+5. Jalankan command `pip install -r requirements.txt` untuk menginstall packages yang dibutuhkan dalam project ini.
