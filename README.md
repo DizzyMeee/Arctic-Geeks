@@ -1,3 +1,8 @@
+<p align="center">
+     <img src="arctic_geeks/static/assets/articomp.png">
+</p>
+<br><br>
+
 # Project Akhir Semester Rekayasa Perangkat Lunak
 ### Anggota Kelompok
 * Belvin Shandy Aurora (11200910000052)
