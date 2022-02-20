@@ -31,6 +31,8 @@
 <hr>
 
 4. **Clone folder GitHub ini ke dalam virtual environmentnya.**
+
+     Buka Git Bash dan gunakan URL `git clone https://github.com/DizzyMeee/PC-Builder-Simulator.git`
      
 <hr>
 
